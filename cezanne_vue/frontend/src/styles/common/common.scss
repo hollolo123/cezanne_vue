@@ -1,0 +1,18 @@
+@forward './import/variables';
+@forward '@/assets/font/font';
+// @forward './import/mixin';
+// @forward './import/animation';
+// @forward './import/elements';
+
+html { font-size: 10px; }
+
+body {
+  font: {
+    family: 'Pretenadrd', Arial, Helvetica, sans-serif;
+    size: 1.4rem;
+    weight: 400;
+  }
+  line-height: 1.5;
+}
+
+a { text-decoration: none; color: inherit; }

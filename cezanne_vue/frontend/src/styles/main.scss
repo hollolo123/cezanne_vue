@@ -1,0 +1,12 @@
+@use '@/styles/common/import/variables' as *;
+@use '@/styles/common/import/mixin' as *;
+
+#container {
+  position: relative;
+  .contents {
+    .inner {
+      background: #ccc;
+      padding: 5rem 2rem;
+    }
+  }
+}

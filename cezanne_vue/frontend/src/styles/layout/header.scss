@@ -1,0 +1,38 @@
+@use '@/styles/common/import/variables' as *;
+@use '@/styles/common/import/mixin' as *;
+
+header {
+  .util {
+    display: none;
+  }
+
+  .header__in {
+    height: 9.4rem;
+    padding: 0 2rem;
+    .logo {
+    }
+    .m__gnb {
+      button {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background: $main-color;
+        span {
+          display: block;
+          width: 18px;
+          height: 2px;
+          background: $white-color;
+          margin: 3px auto;
+          transition: .3s;
+        }
+      }
+    }
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
