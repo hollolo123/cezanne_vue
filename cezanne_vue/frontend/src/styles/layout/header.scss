@@ -2,13 +2,18 @@
 @use '@/styles/common/import/mixin' as *;
 
 header {
+  .inner {
+    @include flexCenter(){
+      justify-content: space-between;
+    }
+    padding:2rem;
+  }
   .util {
     display: none;
   }
 
   .header__in {
     height: 9.4rem;
-    padding: 0 2rem;
     .logo {
     }
     .m__gnb {
@@ -28,11 +33,4 @@ header {
       }
     }
   }
-}
-
-.inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
 }

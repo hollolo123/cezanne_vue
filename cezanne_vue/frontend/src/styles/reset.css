@@ -64,6 +64,7 @@ button {
 	border: none;
 	appearance: none;
 	cursor: pointer;
+	background-color: transparent;
 }
 
 @media (max-width: 1024px) {

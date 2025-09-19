@@ -1,7 +1,7 @@
 <template>
-  <div :id="$style.container">
-    <div :class="$style.contents">
-      <div :class="$style.inner">
+  <div id="container">
+    <div class="contents">
+      <div class="inner">
         이 쪽은 Main 영역입니다.
       </div>
     </div>
@@ -14,6 +14,6 @@
   }
 </script>
 
-<style lang="scss" module>
+<style lang="scss">
   @use '@/styles/main' as *;
 </style>
