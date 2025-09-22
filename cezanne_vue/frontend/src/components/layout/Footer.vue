@@ -16,12 +16,12 @@
             <RiAddLine />
           </button>  
           <div class="site__list" :class="{active:isActive}">
-            <RouterLink to="https://www.moel.go.kr/local/daejeon/index.do" target="_blank" title="고용노동부 대전지방고용노동청">고용노동부 대전지방고용노동청</RouterLink>
-            <RouterLink to="https://www.work.go.kr/daejeon/main.do" target="_blank" title="대전고용센터">대전고용센터</RouterLink>
-            <RouterLink to="https://www.work24.go.kr/cm/main.do" target="_blank" title="고용24">고용24</RouterLink>
-            <RouterLink to="https://c.q-net.or.kr/cmn/com/main.do" target="_blank" title="CQ-NET">CQ-NET</RouterLink>
-            <RouterLink to="https://www.q-net.or.kr/man001.do?gSite=Q&gIntro=Y" target="_blank" title="Q-NET">Q-NET</RouterLink>
-            <RouterLink to="https://www.ncs.go.kr/index.do" target="_blank" title="NCS국가직무능력표준">NCS국가직무능력표준</RouterLink>
+            <a href="https://www.moel.go.kr/local/daejeon/index.do" target="_blank" title="고용노동부 대전지방고용노동청">고용노동부 대전지방고용노동청</a>
+            <a href="https://www.work.go.kr/daejeon/main.do" target="_blank" title="대전고용센터">대전고용센터</a>
+            <a href="https://www.work24.go.kr/cm/main.do" target="_blank" title="고용24">고용24</a>
+            <a href="https://c.q-net.or.kr/cmn/com/main.do" target="_blank" title="CQ-NET">CQ-NET</a>
+            <a href="https://www.q-net.or.kr/man001.do?gSite=Q&gIntro=Y" target="_blank" title="Q-NET">Q-NET</a>
+            <a hrefo="https://www.ncs.go.kr/index.do" target="_blank" title="NCS국가직무능력표준">NCS국가직무능력표준</a>
           </div>
           
         </div>
@@ -31,13 +31,13 @@
         <address>
           <p>대전 중구 중앙로 137번길 36 대전세잔직업전문학교</p>
           <p>사업자등록번호 : 305-90-66359</p>
-          <p><span class="white">Tel . 042)252-1153</span> Fax. 042)252-1105</p>
+          <p><span class="light">Tel . 042)252-1153</span> Fax. 042)252-1105</p>
           <small>&copy; 대전세잔직업전문학교. All rights Reserved.</small>
         </address>
         <div class="sns">
-          <button type="button"><RiYoutubeLine class="ico__youtube" /></button>
-          <button type="button"><RiFacebookFill class="ico__facebook" /></button>
-          <button type="button"><RiInstagramLine class="ico__insta"/></button>
+          <button type="button" onclick="location.href='#'"><RiYoutubeLine class="ico__youtube" /></button>
+          <button type="button" onclick="location.href='#'"><RiFacebookFill class="ico__facebook" /></button>
+          <button type="button" onclick="location.href='#'"><RiInstagramLine class="ico__insta"/></button>
         </div>
       </div>
     </div>

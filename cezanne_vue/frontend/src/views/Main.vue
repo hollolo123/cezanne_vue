@@ -16,4 +16,8 @@
 
 <style lang="scss">
   @use '@/styles/main' as *;
+  #container {
+    position: relative;
+    padding: 5rem 0;
+  }
 </style>
