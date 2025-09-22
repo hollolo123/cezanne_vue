@@ -11,18 +11,19 @@
       </div>
       <div class="familySite">
         <div class="site__wrap">
-          <button type="button" class="selected">
+          <button class="selected" @click="selectList">
             <span>Family Site</span>
             <RiAddLine />
-          </button>
-          <div class="site__list">
-            <a href="https://www.moel.go.kr/local/daejeon/index.do" target="_blank" alt="고용노동부 대전지방고용노동청">고용노동부 대전지방고용노동청</a>
-            <a href="https://www.work.go.kr/daejeon/main.do" target="_blank" alt="대전고용센터">대전고용센터</a>
-            <a href="https://www.work24.go.kr/cm/main.do" target="_blank" alt="고용24">고용24</a>
-            <a href="https://c.q-net.or.kr/cmn/com/main.do" target="_blank" alt="CQ-NET">CQ-NET</a>
-            <a href="https://www.q-net.or.kr/man001.do?gSite=Q&gIntro=Y" target="_blank" alt="Q-NET">Q-NET</a>
-            <a href="https://www.ncs.go.kr/index.do" target="_blank" alt="NCS국가직무능력표준">NCS국가직무능력표준</a>
+          </button>  
+          <div class="site__list" :class="{active:isActive}">
+            <RouterLink to="https://www.moel.go.kr/local/daejeon/index.do" target="_blank" title="고용노동부 대전지방고용노동청">고용노동부 대전지방고용노동청</RouterLink>
+            <RouterLink to="https://www.work.go.kr/daejeon/main.do" target="_blank" title="대전고용센터">대전고용센터</RouterLink>
+            <RouterLink to="https://www.work24.go.kr/cm/main.do" target="_blank" title="고용24">고용24</RouterLink>
+            <RouterLink to="https://c.q-net.or.kr/cmn/com/main.do" target="_blank" title="CQ-NET">CQ-NET</RouterLink>
+            <RouterLink to="https://www.q-net.or.kr/man001.do?gSite=Q&gIntro=Y" target="_blank" title="Q-NET">Q-NET</RouterLink>
+            <RouterLink to="https://www.ncs.go.kr/index.do" target="_blank" title="NCS국가직무능력표준">NCS국가직무능력표준</RouterLink>
           </div>
+          
         </div>
       </div>
       <div class="ftr__info">
@@ -49,16 +50,42 @@ import { RiYoutubeLine } from "@remixicon/vue";
 import { RiFacebookFill } from "@remixicon/vue";
 import { RiInstagramLine } from "@remixicon/vue";
 
-  export default {
-    components : {
-      RiAddLine,
-      RiYoutubeLine,
-      RiFacebookFill,
-      RiInstagramLine
+export default {
+  components : {
+    RiAddLine,
+    RiYoutubeLine,
+    RiFacebookFill,
+    RiInstagramLine
+  },
+  data() {
+    return {
+      isActive : false
+    }
+  },
+  methods : {
+    selectList() {
+      this.isActive = !this.isActive;
     }
   }
+  // methods : {
+  //   handlerList() {
+  //     const btn = document.querySelector('.selected');
+  //     const siteList = document.querySelector('.site__list');
+
+  //     btn.addEventListener('click', () => {
+	// 			siteList.classList.toggle('active');
+	// 		})
+  //   }
+  // }, 
+  // mounted() {
+  //   this.handlerList();
+  // }
+  // setup 으로 바꿔보기 ........... setup - ref 
+}
 </script>
 
 <style lang="scss">
   @use '@/styles/layout/footer' as *;
+
+
 </style>
