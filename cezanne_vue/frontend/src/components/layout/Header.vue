@@ -17,7 +17,7 @@
           </button>
         </div>
         <!-- mobile gnb : menu -->
-        <div class="mobileWrap" :class="{active:isActive}">
+        <div class="mobileWrap" :class="{active:isActive, open:isOpen}">
           <div class="m_gnb">
             <div class="m_gnb__ar">
               <h2 class="tit">최고의 강사진과 맞춤형 관리 <br> 실무 중심 커리큘럼</h2>
@@ -161,12 +161,21 @@
   export default {
     data() {
       return {
-        isActive: false
+        isActive: false,
+        isOpen : false
       }
     },
+    
     methods : {
       handlerSiteMap(){
-        this.isActive = !this.isActive
+        this.isActive = !this.isActive;
+        
+        const body = document.querySelector('body');
+        document.addEventListener('click', () => {
+          body.classList.toggle('open');
+        });
+    
+        
       }
     }
   }
