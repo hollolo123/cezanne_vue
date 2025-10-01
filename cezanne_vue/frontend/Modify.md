@@ -23,8 +23,8 @@
         }
     }
     ```
-
-    - 수정코드
+    
+- 수정코드
       ```vue
       export default {
       data() {
