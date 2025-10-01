@@ -68,9 +68,9 @@ button {
 }
 
 @media (max-width: 1024px) {
-	html { font-size: 9px; }
+	html { font-size: 14px; }
 }
 
 @media (max-width: 768px) {
-	html { font-size: 8px; }
+	html { font-size: 12px; }
 }

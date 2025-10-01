@@ -17,7 +17,7 @@
           </button>
         </div>
         <!-- mobile gnb : menu -->
-        <div class="mobileWrap" :class="{active:isActive, open:isOpen}">
+        <div class="mobileWrap" :class="{active:isActive}">
           <div class="m_gnb">
             <div class="m_gnb__ar">
               <h2 class="tit">최고의 강사진과 맞춤형 관리 <br> 실무 중심 커리큘럼</h2>
@@ -162,7 +162,6 @@
     data() {
       return {
         isActive: false,
-        isOpen : false
       }
     },
     
@@ -171,11 +170,14 @@
         this.isActive = !this.isActive;
         
         const body = document.querySelector('body');
-        document.addEventListener('click', () => {
-          body.classList.toggle('open');
-        });
-    
-        
+        // document.addEventListener('click', () => {
+        //   body.classList.toggle('open');
+        // });
+        if(this.isActive){
+          body.classList.add('open');
+        } else {
+          body.classList.remove('open')
+        }
       }
     }
   }
@@ -184,5 +186,5 @@
 <style lang="scss">
   @use '@/styles/layout/header' as *;
   @use '@/styles/layout/sitemap' as *;
-
+  
 </style>

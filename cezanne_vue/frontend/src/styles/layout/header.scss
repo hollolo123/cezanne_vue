@@ -1,13 +1,14 @@
 @use '@/styles/common/import/variables' as *;
 @use '@/styles/common/import/mixin' as *;
 
-
 // m_gnb click : body에 추가
 .open {
   overflow: hidden;
 }
 
 header {
+  position: relative;
+  z-index: 15;
   .inner {
     @include flexCenter(){
       justify-content: space-between;
@@ -17,124 +18,127 @@ header {
   .utill {
     display: none;
   }
-
-  .header__in {
-    height: 9.4rem;
-    .logo {
-      max-width: 100%;
-    }
-    .m__gnb__btn {
-      button {
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        background: $main-color;
-        span {
-          display: block;
-          width: 1.8rem;
-          height: .25rem;
-          background: $white-color;
-          margin: 3px auto;
-          transition: .3s;
+    .header__in {
+      height: 9.4rem;
+      .logo {
+        max-width: 100%;
+      }
+      .m__gnb__btn {
+        button {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          background: $main-color;
+          span {
+            display: block;
+            width: 1.8rem;
+            height: .25rem;
+            background: $white-color;
+            margin: 3px auto;
+            transition: .3s;
+          }
         }
       }
+      .webWrap {display: none;}
     }
-    .webWrap {display: none;}
   }
-}
-.mobileWrap {
-  position: absolute;
-  top: 94px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1023;
-  transition: opacity .35s, visibility .35s;
-  
-  .m_gnb {
+// 모바일 전용 스타일
+@media (max-width: 991px) {
+  .mobileWrap {
     position: absolute;
-    top: 0;
+    top: 94px;
     left: 0;
     right: 0;
     bottom: 0;
-    display: block;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1023;
+    transition: opacity .35s, visibility .35s;
+    
+    .m_gnb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
 
-    .m_gnb__ar {
-      padding: 5rem 2rem;
-      background-color: #EFEFEF;
+      .m_gnb__ar {
+        padding: 5rem 2rem;
+        background-color: #EFEFEF;
 
-      .tit {
-        font: {
-          size: 3rem;
-          weight: 600;
+        .tit {
+          font: {
+            size: 2.4rem;
+            weight: 600;
+          }
+          color: #2d2d2d;
+          letter-spacing: -.15rem;
         }
-        color: #2d2d2d;
-        letter-spacing: -.15rem;
-      }
 
-      .subtit {
-        margin-top: .5rem;
-        font: {
-          size: 1.6rem;
-          weight: 400;
+        .subtit {
+          margin-top: .5rem;
+          font: {
+            size: 1.4rem;
+            weight: 400;
+          }
+          color: #818181;
+          letter-spacing: -.15rem;
         }
-        color: #818181;
-        letter-spacing: -.15rem;
-      }
-    }
-
-    .m_gnb__content {
-      height: calc(100vh - 157px - 10rem);
-      padding: 5rem 2rem;
-      overflow-y: auto;
-      background: {
-        color: #f6f6f6;
       }
 
-      > ul {
-        display: flex;
-        flex-direction: column;
+      .m_gnb__content {
+        height: calc(100vh - 157px - 6rem);
+        padding: 3rem 2rem;
+        overflow-y: auto;
+        background: {
+          color: #f6f6f6;
+        }
 
-        > li {
+        > ul {
           display: flex;
-          align-items: center;
-          padding: 3rem 0;
+          flex-direction: column;
 
-          &:not(:last-child) {
-            border-bottom: 1px dashed #A7A7A7;
-          }
+          > li {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 0;
 
-          > span {
-            min-width: 11rem;
-            font: {
-              size: 2rem;
-              weight: 700;
+            &:not(:last-child) {
+              border-bottom: 1px dashed #A7A7A7;
             }
-            color: #373737;
-          }
 
-          > a {
-            font: {
-              size: 1.8rem;
-              weight: 400;
+            > span {
+              min-width: 8rem;
+              font: {
+                size: 1.4rem;
+                weight: 700;
+              }
+              color: #373737;
             }
-          }
 
-          .subMenu {
-            .inner {
-              gap: 3rem;
+            > a {
+              font: {
+                size: 1.2rem;
+                weight: 400;
+              }
+            }
+
+            .subMenu {
+              .inner {
+                gap: 2rem;
+              }
             }
           }
         }
       }
     }
   }
-}
-.mobileWrap.active {
-  opacity: 1;
-  visibility: visible;
+  
+  .mobileWrap.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 // web gnb 

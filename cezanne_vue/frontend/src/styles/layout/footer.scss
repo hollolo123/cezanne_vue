@@ -3,14 +3,16 @@
 
 footer {
   .inner {
-    @include flexCenter();
+    // @include flexCenter(){
+    //   align-items: baseline
+    // };
     padding:2rem;
   }
   .familySite {
     margin: 2rem;
     .site__wrap {
       position: relative;
-      z-index: 95;  
+      z-index:10;  
       .selected {
         display: flex;
         justify-content: space-between;
@@ -19,7 +21,7 @@ footer {
         width: 100%;
         height: 4.6rem;
         line-height: 4.6rem;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: 500;
         color: rgba(255,255,255,.8);
         background:#353942;
@@ -71,12 +73,10 @@ footer {
     }
 
     .ftr__info {
-      padding: 2rem;
       .ftr__logo {
         display: none;
       }
       address {
-        margin-top: 1.5rem;
         font-style: normal;
         color: $gray-color;
         font-size: 1.4rem;
@@ -107,6 +107,83 @@ footer {
           }
           .ico__insta:hover {
             color: #c81aeb;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:768px) {
+  footer {
+    .footer {
+      .family__wrapper {
+        position: relative;
+        max-width: 1280px;
+        margin: 0 auto;
+        .familySite {
+          display: block;
+          position: absolute;
+          right: 2rem;
+          bottom: 8px;
+          width: 25rem;
+          margin: 0;
+          .site_wrap {
+            .selected {
+              height: 4rem;
+              line-height: 4rem;
+              font-size: 1.4rem;
+            }
+            .siteList {
+              bottom :4rem;
+            }
+          }
+        } 
+      }
+      .ftr__info {
+        .inner {
+          position: relative;
+        }
+        .ftr__logo {display: none;}
+        address {
+          margin-top: 0;
+          font-size: 1.5rem;
+        }
+        .sns {
+          position: absolute;
+          right: 2rem;
+          top: 0;
+        }
+      }
+    }
+    }
+}
+
+@media (min-width:992px) {
+  footer {
+    .footer {
+      .family__wrapper {
+        .familySite {
+          right: 0;
+        }
+      }
+      .ftr__info {
+        .inner {
+          padding: 2rem 0;
+          display: flex;
+          .ftr__logo {
+            display: block;
+            width: 220px;
+            height: 45px;
+            // height: 100%;
+            background-image: url('../../assets/images/common/footer_logo2.svg');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            span {visibility: hidden;}
+          }
+          address {
+            padding-left: 4rem;
+            margin: 0;
           }
         }
       }

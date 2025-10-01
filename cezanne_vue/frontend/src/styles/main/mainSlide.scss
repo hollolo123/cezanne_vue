@@ -1,0 +1,10 @@
+@use '@/styles/common/import/variables' as *;
+@use '@/styles/common/import/mixin' as *;
+
+.mainSlide {
+  .mainSlide__item {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
