@@ -1,10 +1,61 @@
 @use '@/styles/common/import/variables' as *;
 @use '@/styles/common/import/mixin' as *;
 
+/* main swiper */
 .mainSlide {
-  .mainSlide__item {
-    h2 {
-      font-size: 2rem;
+  position: relative;
+  height: 50rem;
+  .swiper-pagination {
+    padding: 1rem 0;
+    width: 100%;
+    span {transform: scale(1.5); opacity: .5;}
+    .swiper-pagination-bullet-active {background: $main-color;}
+  }
+  .swiper-slide {
+    position: relative;
+    height: 100%;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .3);
+      z-index: 1;
+    }
+  }
+  .slide__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    
+    .h_slogan {
+      font-weight: 700;
+      color: $white-color;
+      font-size: 2.6rem;
+      line-height: 1.5;
+      text-align: center;
+      padding: 0 10rem;
     }
   }
 }

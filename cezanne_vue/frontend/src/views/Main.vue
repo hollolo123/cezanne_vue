@@ -4,7 +4,9 @@
       <MainSlideComp />
       <div class="inner">
         <PortfolioComp />
-        <EducationComp />
+      </div>
+      <EducationComp />
+      <div class="inner">
         <ConsultComp />
       </div>
     </div>

@@ -1,0 +1,123 @@
+@use '@/styles/common/import/variables' as *;
+
+.portfolio {
+  position: relative;
+  .textbg {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: 800;
+    color: $gray-color;
+    opacity:.2;
+    display: block;
+    line-height: 3.5rem;
+  }
+  .bg1 {
+    left: 1rem;
+    top: 10rem;
+  }
+  .bg2 {
+    right: 3%;
+    bottom: 10%;
+  }
+  .inner {
+    padding: 5rem 2rem;
+  }
+  .cardSlide_wrap {
+    position: relative;
+    padding: 5rem 0;
+  }
+}
+
+/* swiper */
+.slideArea {
+  padding-bottom: 5rem;
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 320px;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      border-radius: 6px;
+    }
+    .swiper-pagination-bullet-active {
+      width: 68px;
+      background:$dark-color;
+    }
+  }
+  .item {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .itemInfo {
+        bottom: 0;
+        ul > li {
+          line-height: 1.5;
+          font-size: 1.6rem;
+          font-weight: 300;
+        }
+        .eduTitle {
+          font-size: 2rem;
+          font-weight: 600;
+          margin: 1rem 0;
+        }
+        .go {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .itemInfo {
+    display: block;
+    position: absolute;
+    bottom:-100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .75);
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .8s;
+    text-align: center;
+    ul {
+      li {
+        &.go {
+          a {
+            display: inline-block;
+            border: 1px solid #fff;
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            font-size: 1.6rem;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (min-width:768px) {
+  .portfolio {
+    .textbg {
+      font-size: 4.5rem;
+    } 
+  }
+}
+@media (min-width:992px) {
+  .portfolio {
+    .textbg {
+      font-size: 5.5rem;
+    }
+    .bg1 {
+      left: 1rem;
+      top: 10rem;
+    }
+  }
+}

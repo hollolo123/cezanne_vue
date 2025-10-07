@@ -1,0 +1,72 @@
+.consult {
+  .inner {
+    padding: 5rem 2rem;
+  }
+  .consultHead {
+    .title {
+      h4 {
+        padding-bottom: 2rem;
+      }
+      padding-bottom: 3rem;
+    }
+    .gotoApply {
+      span {
+        display: inline-block; 
+        width: calc((100%/2) - 1rem);
+        vertical-align: top;
+      }
+      .tel {
+        display: inline-block;
+        font-size: 2.8rem;
+        font-weight: 600;
+      }
+      .icobg {
+        background:#dbdbdb;
+        border-radius: 50%;
+        padding: 0.5rem;
+        vertical-align: middle
+      }
+      button {
+        &.icokakao {
+          line-height: 4rem;
+          padding-left: 35px;
+          background-image: url('@/assets/images/main/ico_kakao.png');
+          background-repeat: no-repeat;
+          background-size: 30px;
+          background-position: 0 0;
+          font-size: 1.9rem;
+          font-weight: 600;
+        }
+        
+      }
+    }
+  }
+  .consultForm {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width:992px) {
+  .consult {
+    .consultHead {
+      display:flex;
+      justify-content: space-between;
+      .title {
+        width: 65%;
+        display: flex;
+        .text {
+          padding-left: 5rem;
+        }
+      }
+      .gotoApply {
+        display: flex;
+        justify-content: space-around;
+        width: 35%;
+        padding-right: 2rem;
+        span {
+          width: auto;
+        }
+      }
+    }
+  }
+}
