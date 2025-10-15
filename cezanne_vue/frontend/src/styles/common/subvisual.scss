@@ -1,0 +1,57 @@
+@use '@/styles/common/import/variables' as *;
+
+// Sub Visual Layout
+.sub_visual {
+  &.edu {
+    padding: 5rem 0 2rem 0;
+    color: $white-color;
+    background: {
+      image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+      url('@/assets/images/about/visual_bg.jpg');
+      repeat: no-repeat;
+      size: cover;
+    }
+  }
+  &.port {
+    padding: 5rem 0 2rem 0;
+    color: $white-color;
+    background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('@/assets/images/portfolio/portfolio_visual_bg.jpg');
+    repeat: no-repeat;
+    size: cover;
+    }
+  }
+
+
+  .sub_visual_text {
+    text-align: center;
+    padding: 0 0 3.5rem;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    h2 {
+      font-size: 2.8rem;
+    }
+    p {
+      margin-top: 1rem;
+      line-height: 1.5;
+      opacity: 0.8;
+    }
+  }
+  
+  .bread {
+    ul {
+      display: flex;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      li {
+        .pi-chevron-right:before {
+          font-size: 1rem;
+          font-weight: 400;
+          opacity: 0.8;
+          margin: 0 0.5rem
+        }
+      }
+    }
+  }
+}

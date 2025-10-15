@@ -8,7 +8,7 @@
     </div>
     <div class="header__in">
       <div class="inner">
-        <div class="logo"><router-link to="/"><img src="../../assets/images/common/logo.png" alt="대전세잔직업전문학교" /></router-link></div>
+        <div class="logo"><router-link to="/"><img src="@/assets/images/common/logo.png" alt="대전세잔직업전문학교" /></router-link></div>
         <div class="m__gnb__btn">
           <button type="button" @click="handlerSiteMap">
             <span class="bar1"></span>
@@ -29,7 +29,7 @@
                   <span>학교소개</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/">학교소개</router-link></li>
+                      <li><router-link to="/about">학교소개</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -37,7 +37,7 @@
                   <span>교육과정</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/">교육과정</router-link></li>
+                      <li><router-link to="/education">교육과정</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -45,7 +45,7 @@
                   <span>포트폴리오</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/">포트폴리오</router-link></li>
+                      <li><router-link to="/portfolio">포트폴리오</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -53,7 +53,7 @@
                   <span>상담센터</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/">온라인 상담</router-link></li>
+                      <li><router-link to="/counsel">온라인 상담</router-link></li>
                       <li><router-link to="/" target="_blank">카카오톡 상담</router-link></li>
                       <li><router-link to="/">고객칭찬/불편접수</router-link></li>
                     </ul>
@@ -63,7 +63,7 @@
                   <span>취업센터</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/">취업현황</router-link></li>
+                      <li><router-link to="/job">취업현황</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -96,18 +96,18 @@
                 </div>
               </li>
               <li>
-                <a href="./src/html/education/education.html">교육과정</a>
+                <router-link to="/education">교육과정</router-link>
                 <div class="subMenu">
                   <ul class="inner">
-                    <li><a href="./src/html/education/education.html">교육과정</a></li>
+                    <li><router-link to="/education">교육과정</router-link></li>
                   </ul>
                 </div>
               </li>
               <li>
-                <a href="./src/html/portfolio/index.html">포트폴리오</a>
+                <router-link to="/portfolio">포트폴리오</router-link>
                 <div class="subMenu">
                   <ul class="inner">
-                    <li><a href="./src/html/portfolio/index.html">포트폴리오</a></li>
+                    <li><router-link to="/portfolio">포트폴리오</router-link></li>
                   </ul>
                 </div>
               </li>
@@ -185,6 +185,6 @@
 
 <style lang="scss">
   @use '@/styles/layout/header' as *;
-  @use '@/styles/layout/sitemap' as *;
+  @use '@/styles/common/sitemap' as *;
   
 </style>

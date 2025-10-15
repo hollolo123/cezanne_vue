@@ -1,0 +1,250 @@
+@use '@/styles/common/import/variables' as *;
+@use '@/styles/common/import/mixin' as *;
+// 수정
+
+.subtit {
+  margin-bottom: 3rem;
+  font: {
+    size: 2.8rem;
+    weight: 200;
+  }
+  color: #282828;
+}
+
+.visual__top {
+  background: {
+    color: rgba(0, 0, 0, .7);
+    image: url(@/assets/images/main/edu_disital_img02.jpg);
+    size: cover;
+    position: center;
+    blend-mode: darken;
+  }
+}
+
+
+.visual__top {
+  position: relative;
+  padding: 12rem 0 6rem;
+  overflow: hidden;
+  z-index: 1;
+
+  .visual__tit {
+    text-align: center;
+
+    > span {
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+      color: rgba(255, 255, 255, .5);
+    }
+
+    h2 {
+      margin: {
+        top: 2rem;
+        bottom: 4rem;
+      }
+      font: {
+        size: 3.7rem;
+      }
+      span {
+        font-weight: 100;
+      }
+      color: #fff;
+    }
+  }
+
+  p {
+    line-height: 1.9;
+    text-align: center;
+    word-break: keep-all;
+    font-weight: 300;
+    color: #fff;
+
+    b {
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+}
+
+.class__info {
+  position: relative;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    > li {
+      padding: 3rem 2rem;
+      border: {
+        radius: 5px;
+      }
+      box-shadow: 6px 10px 30px rgba(16, 28, 93, .2);
+
+      .description {
+        position: relative;
+
+        b {
+          display: block;
+          margin-bottom: 2rem;
+          font: {
+            size: 1.4rem;
+            weight: 500;
+          }
+          color: #666;
+        }
+        strong {
+          font: {
+            size: 3rem;
+            weight: 900;
+          }
+        }
+        span {
+          font: {
+            size: 1.4rem;
+          }
+        }
+        i {
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-size: 3rem;
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+.class__suggest {
+  margin-top: 6rem;
+
+  ul {
+    > li {
+      width: 100%;
+      padding: 3rem;
+      border-radius: 6px;
+      box-shadow: 6px 5px 15px rgba(16, 28, 93, .2);
+
+      ~ li {
+        margin-top: 2rem;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 9rem;
+        height: 2.4rem;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        border: 1px solid $main-color;
+        border-radius: 32px;
+        font-size: 12px;
+        font-weight: 800;
+        color: $main-color;
+      }
+    }
+  }
+}
+
+.job__faq__wrap {
+  margin-top: 8rem;
+
+  ul {
+    > li {
+      width: 100%;
+      padding: 3rem;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 6px 5px 15px rgba(16, 28, 93, .2);
+
+      ~ li {
+        margin-top: 1rem;
+      }
+
+      button {
+        position: relative;
+        display: block;
+        width: 100%;
+        font: {
+          size: 2.1rem;
+          weight: 800;
+        }
+        text-align: left;
+
+        + p {
+          position: relative;
+          margin-top: 2rem;
+          padding: 3rem 3rem 3rem 5rem;
+          background-color: #f2f3f5;
+          border-radius: 5px;
+          word-break: keep-all;
+          line-height: 1.5;
+
+          &::before {
+            content: 'A.';
+            position: absolute;
+            top: 3rem;
+            left: 2.5rem;
+            font: {
+              size: 1.6rem;
+              weight: 600;
+            }
+            color: #ff0000;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media all and (min-width: 768px) {
+  .visual__top {
+    p {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+  }
+
+  .class__info {
+    ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .class__info {
+    ul {
+      grid-template-columns: repeat(4, 1fr) 30rem;
+
+      > li {
+        padding: 2rem;
+
+        .description {
+          min-height: 11rem;
+
+          b {
+            margin-bottom: 1rem;
+          }
+          i {
+            top: auto;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .class__info {
+    ul {
+      grid-template-columns: 100%;
+    }
+  }
+}

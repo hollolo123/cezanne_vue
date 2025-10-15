@@ -1,0 +1,200 @@
+@use '@/styles/common/import/variables' as *;
+
+
+// sub_visual 포트폴리오 사진으로 바꾸기
+.sub_visual {
+  background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/portfolio/portfolio_visual_bg.jpg);
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+}
+
+// 전체 컨텐츠 위, 아래 여백
+#contents_body {
+  padding: 5rem 0;
+}
+
+// 포트폴리오
+a {text-decoration: none;}
+a:hover {text-decoration: none;}
+
+// 포트폴리오 메뉴 버튼
+.menuBtn {
+  text-align: center;
+  button {
+    font: inherit;
+    color: inherit;
+    padding: 1rem 2rem;
+    margin-top: 1.5625rem;
+    word-break: keep-all;
+    border: 1px solid #ECECEC;
+    border-radius: 20px;
+    &:hover {
+      background: $main-color;
+      color: $white-color;
+      transition: .3s;
+    }
+  }
+}
+
+
+// 포폴
+.portfolio-card:first-child {
+  // border-top: 1px solid #ECECEC;
+}
+
+// 포트폴리오 리스트
+.portfolio-card__link {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid #ECECEC;
+  overflow: hidden;
+}
+
+/* 이미지, + 아이콘 */
+.portfolio-card__img {
+  position: relative;
+  min-height: 150px;
+  overflow: hidden;
+
+  // 검은 배경 오버레이
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($dark-color, .4); // 카드를 덮는 검은 반투명
+    opacity: 0;
+    transition: opacity .25s ease;
+    z-index: 2; // 텍스트, 이미지 위로 올라옴
+  }
+
+  
+  &::after {
+    opacity: 0;
+    transition: opacity .5s;
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba($white-color, .9);
+  }
+
+  // 포트폴리오 이미지
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s ease; /* 0.3초 동안 부드럽게 변화 */
+  }
+
+  .plus-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: $main-color;
+    opacity: 0;
+    transition: opacity .5s;
+    z-index: 5; // 오버레이보다 위
+  }
+
+  .portfolio-card__link:hover &::after,
+  .portfolio-card__link:focus-visible &::after,
+  .portfolio-card__link:hover & .plus-icon,
+  .portfolio-card__link:hover &::before,
+  .portfolio-card__link:focus-visible & .plus-icon,
+  .portfolio-card__link:focus-visible &::before {
+    opacity: 1;
+  }
+}
+
+// 호버시 이미지 확대
+.portfolio-card__img {
+  overflow: hidden;
+}
+.portfolio-card__link:hover .portfolio-card__img img {
+  transition: transform 0.4s ease; 
+  transform: scale(1.1); /* 120% 크기로 확대 */
+}
+
+
+.portfolio-card__link {
+  &:hover {
+    .portfolio-card__img {
+      img {
+        transition: transform 0.4s ease; 
+        transform: scale(1.2); /* 120% 크기로 확대 */
+      }
+    }
+
+    .portfolio-card__view {
+      color: $main-color;
+      animation-name: eff-move;
+      animation-duration: .6s; // 애니메이션 한 번 도는 데 0.6초 걸림
+      animation-timing-function: linear; // 일정한 속도로 애니메이션 실행
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+.portfolio-card__view {
+  transition: color .4s;
+}
+
+@keyframes eff-move {
+  0% {
+    transform: translateX(0)
+  }
+  50% {
+    transform: translateX(-8px) 
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
+/* 텍스트 영역 */
+.portfolio-card__body {
+  position: relative;
+  z-index: 1; // 기본은 이미지 위
+  display: grid;
+  gap: 10px;
+  line-height: 1.5625; 
+  word-break: keep-all;
+  margin-left: .5rem;
+  .portfolio-card__view {
+    // display: none;
+    text-align: end; 
+    margin-right: .5rem;
+  }
+}
+
+// 768px 이상 가로 배치
+@media (min-width:768px) {
+  .portfolio-card__link {
+    grid-template-columns: 40rem 1fr;
+    padding: 2rem 0;
+    gap: 4.5rem;
+  }
+  .portfolio-card__img { max-height: 21.3rem; }
+  .portfolio-card__title { margin-top: .4rem; }
+  .portfolio-card__name { font-size: 1.4rem; }
+  .portfolio-card__view { 
+    margin: 2rem .5rem 0 0; 
+  }
+}

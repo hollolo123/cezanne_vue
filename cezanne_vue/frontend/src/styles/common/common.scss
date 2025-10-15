@@ -1,8 +1,9 @@
-@forward './import/variables';
+@use './import/variables' as *;
 @forward '@/assets/font/font';
+//@forward './import/variables';
+// @forward './import/elements';
 // @forward './import/mixin';
 // @forward './import/animation';
-// @forward './import/elements';
 
 html { font-size: 10px; }
 
@@ -26,6 +27,36 @@ h5 {font-size: 2.2rem; font-weight: 700;}
 h6 {font-size: 2rem;}
 
 /* inner */
+.inner {
+  padding:0 2rem;
+}
+
+/* Top Button */
+#topBtn {
+  opacity: 0;
+  visibility: hidden;
+  transition: .35s;
+
+  &.scrolled {
+    opacity: 1;
+    visibility: visible;
+  }
+  button {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background:#d7d7d7;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    z-index: 99;
+    i {
+      font-size: 3rem;
+      color: $gray-color;
+    }
+  }
+}
+
 @media all and (min-width: 1200px) {
   .inner {
     max-width: 1280px;
@@ -35,6 +66,8 @@ h6 {font-size: 2rem;}
 
 @media all and (min-width:1440px) {
   .inner {
+    max-width: 1440px;
+    margin: 0 auto;
     padding:0;
   }
 }

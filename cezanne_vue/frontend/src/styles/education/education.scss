@@ -1,0 +1,149 @@
+@use '@/styles/common/import/variables' as *;
+@use '@/styles/common/import/elements' as *;
+
+#container{
+  .edu-menu{
+    display:flex; 
+    flex-direction:column; 
+    gap:4rem;
+    padding:0 1rem; 
+    margin:3.5rem 0;
+    .menu-btn{
+      .btn{
+        cursor:pointer; 
+        font-size:1.3rem;
+        display:block; 
+        transition:var(--default-transition);
+        width:100%; 
+        padding:0.625rem; 
+        border-radius:3px; 
+        margin:0.5rem 0; 
+        color:$dark-color; 
+        background-color:$gray-color;
+        &:hover{
+          color:$white-color; 
+          background-color:$dark-color;
+        }
+      }
+      // active 이벤트
+      .active{
+        color:$white-color; 
+        background-color:$dark-color;
+      }
+    }
+  }
+  .edu-contents{
+    display:flex; 
+    flex-wrap:wrap;
+    .content{
+      flex:0 0 50%; 
+      display:flex; 
+      flex-wrap:wrap; 
+      align-content:space-between; 
+      justify-content:center;
+      padding:0 1.25rem; margin:2.5rem 0;
+      a{
+        display: block;
+        width: 100%; 
+        text-align: center;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+
+          img {
+            border-color: $main-color;
+            box-shadow: 2px 0 16px rgba(230, 32, 75, .4);
+          }
+        }
+
+        h4 {
+          font-size: 2rem;
+          word-break: keep-all;
+        }
+
+        img {
+          width: 100%;
+          border:1px solid $dark-color; 
+          border-radius:10px;
+          transition: .35s;
+        }
+
+        span{
+          display: block;
+          margin: 1.5rem 0;
+          font-size:1.4rem;
+        }
+      }
+
+      .btn-join {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 15rem;
+        height: 4rem;
+        margin-top: 1.5rem;
+        background-color: $main-color;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        font: {
+          size: 1.5rem;
+          weight: 500;
+        }
+        color: #fff;
+        text-decoration: none;
+        transition: .35s;
+
+        &:hover,
+        &:focus {
+          background-color: #fff;
+          border-color: $main-color;
+          color: $main-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width:768px){
+  #container{
+    .edu-menu{
+      .menu-btn{
+        display:flex; gap:5px;
+        .btn{
+          width:auto; 
+          padding:0.625rem 1.25rem; 
+          margin:0;
+        }
+      }
+    }
+    .edu-contents{
+      .content{
+        flex:0 0 25%;
+        padding:0 1.5rem;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width:992px){
+  
+}
+
+
+@media screen and (min-width:1200px){
+  #container{
+    .edu-menu{
+      padding:0 2.5rem;
+    }
+    .edu-contents{
+      .content{
+        padding:0 2.5rem;
+      }
+    }
+  }
+}

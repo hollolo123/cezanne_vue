@@ -1,4 +1,10 @@
-#contents_body { min-height: calc(100vh - 94px - 246px); padding: 5rem 0; }
+@use '@/styles/common/import/variables' as *;
+@use '@/styles/common/import/mixin' as *;
+
+#contents_body { 
+  min-height: calc(100vh - 94px - 246px); 
+  padding: 5rem 0; 
+}
 
 /*
 * Common - Top

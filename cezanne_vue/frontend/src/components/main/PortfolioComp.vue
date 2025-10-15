@@ -26,7 +26,7 @@
                 <ul>
                   <li>{{ item.text }}</li>
                   <li class="eduTitle">{{item.eduTitle}}</li>
-                  <li class="go"><a :href="item.url" target="_blank">포트폴리오 바로가기</a></li>
+                  <li class="go"><router-link to="#" :href="item.url" target="_blank">포트폴리오 바로가기</router-link></li>
                 </ul>
               </div>
             </div>
