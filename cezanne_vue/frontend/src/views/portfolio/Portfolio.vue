@@ -49,7 +49,7 @@
                   <li class="portfolio-card">
                     <a href="../p_detail/p_detail.html" class="portfolio-card__link">
                       <figure class="portfolio-card__img">
-                        <img src="../../images/portfolio/portfolio_img1.png" alt="WEB 41기 포트폴리오1">
+                        <img src="@/assets/images/portfolio/portfolio_img1.png" alt="WEB 41기 포트폴리오1">
                         <!-- + 아이콘 -->
                         <i class="ri-add-line plus-icon"></i>
                       </figure>
@@ -69,7 +69,7 @@
                   <li class="portfolio-card">
                     <a href="../p_detail/p_detail2.html" class="portfolio-card__link">
                       <figure class="portfolio-card__img">
-                        <img src="../../images/portfolio/portfolio_img2.png" alt="WEB 41기 포트폴리오2">
+                        <img src="@/assets/images/portfolio/portfolio_img2.png" alt="WEB 41기 포트폴리오2">
                         <!-- + 아이콘 -->
                         <i class="ri-add-line plus-icon"></i>
                       </figure>
@@ -89,7 +89,7 @@
                   <li class="portfolio-card">
                     <a href="../p_detail/p_detail3.html" class="portfolio-card__link">
                       <figure class="portfolio-card__img">
-                        <img src="../../images/portfolio/portfolio_img3.png" alt="WEB 37기 포트폴리오1">
+                        <img src="@/assets/images/portfolio/portfolio_img3.png" alt="WEB 37기 포트폴리오1">
                         <!-- + 아이콘 -->
                         <i class="ri-add-line plus-icon"></i>
                       </figure>
@@ -109,7 +109,7 @@
                   <li class="portfolio-card">
                     <a href="#" class="portfolio-card__link">
                       <figure class="portfolio-card__img">
-                        <img src="../../images/portfolio/portfolio_img4.png" alt="WEB 35기 포트폴리오1">
+                        <img src="@/assets/images/portfolio/portfolio_img4.png" alt="WEB 35기 포트폴리오1">
                         <!-- + 아이콘 -->
                         <i class="ri-add-line plus-icon"></i>
                       </figure>
@@ -129,7 +129,7 @@
                   <li class="portfolio-card">
                     <a href="#" class="portfolio-card__link">
                       <figure class="portfolio-card__img">
-                        <img src="../../images/portfolio/portfolio_img5.png" alt="WEB 35기 포트폴리오1">
+                        <img src="@/assets/images/portfolio/portfolio_img5.png" alt="WEB 35기 포트폴리오1">
                         <!-- + 아이콘 -->
                         <i class="ri-add-line plus-icon"></i>
                       </figure>
@@ -149,7 +149,7 @@
                   <li class="portfolio-card">
                     <a href="#" class="portfolio-card__link">
                       <figure class="portfolio-card__img">
-                        <img src="../../images/portfolio/portfolio_img6.jpg" alt="WEB 32기 포트폴리오1">
+                        <img src="@/assets/images/portfolio/portfolio_img6.jpg" alt="WEB 32기 포트폴리오1">
                         <!-- + 아이콘 -->
                         <i class="ri-add-line plus-icon"></i>
                       </figure>
@@ -169,7 +169,7 @@
                   <li class="portfolio-card">
                     <a href="#" class="portfolio-card__link">
                       <figure class="portfolio-card__img">
-                        <img src="../../images/portfolio/portfolio_img7.jpg" alt="메타버스 공간구축 02기 포트폴리오1">
+                        <img src="@/assets/images/portfolio/portfolio_img7.jpg" alt="메타버스 공간구축 02기 포트폴리오1">
                         <!-- + 아이콘 -->
                         <i class="ri-add-line plus-icon"></i>
                       </figure>
@@ -214,7 +214,7 @@
                 <li class="portfolio-card">
                   <a href="../p_detail/p_detail.html" class="portfolio-card__link">
                     <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img1.png" alt="WEB 41기 포트폴리오1">
+                      <img src="@/assets/images/portfolio/portfolio_img1.png" alt="WEB 41기 포트폴리오1">
                       <!-- + 아이콘 -->
                       <i class="ri-add-line plus-icon"></i>
                     </figure>
@@ -234,7 +234,7 @@
                 <li class="portfolio-card">
                   <a href="../p_detail/p_detail2.html" class="portfolio-card__link">
                     <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img2.png" alt="WEB 41기 포트폴리오2">
+                      <img src="@/assets/images/portfolio/portfolio_img2.png" alt="WEB 41기 포트폴리오2">
                       <!-- + 아이콘 -->
                       <i class="ri-add-line plus-icon"></i>
                     </figure>
@@ -254,7 +254,7 @@
                 <li class="portfolio-card">
                   <a href="../p_detail/p_detail3.html" class="portfolio-card__link">
                     <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img3.png" alt="WEB 37기 포트폴리오1">
+                      <img src="@/assets/images/portfolio/portfolio_img3.png" alt="WEB 37기 포트폴리오1">
                       <!-- + 아이콘 -->
                       <i class="ri-add-line plus-icon"></i>
                     </figure>
@@ -274,7 +274,7 @@
                 <li class="portfolio-card">
                   <a href="#" class="portfolio-card__link">
                     <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img4.png" alt="WEB 35기 포트폴리오1">
+                      <img src="@/assets/images/portfolio/portfolio_img4.png" alt="WEB 35기 포트폴리오1">
                       <!-- + 아이콘 -->
                       <i class="ri-add-line plus-icon"></i>
                     </figure>
@@ -294,7 +294,7 @@
                 <li class="portfolio-card">
                   <a href="#" class="portfolio-card__link">
                     <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img5.png" alt="WEB 35기 포트폴리오1">
+                      <img src="@/assets/images/portfolio/portfolio_img5.png" alt="WEB 35기 포트폴리오1">
                       <!-- + 아이콘 -->
                       <i class="ri-add-line plus-icon"></i>
                     </figure>
@@ -338,7 +338,7 @@
                 <li class="portfolio-card">
                   <a href="#" class="portfolio-card__link">
                     <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img6.jpg" alt="WEB 32기 포트폴리오1">
+                      <img src="@/assets/images/portfolio/portfolio_img6.jpg" alt="WEB 32기 포트폴리오1">
                       <!-- + 아이콘 -->
                       <i class="ri-add-line plus-icon"></i>
                     </figure>
@@ -382,7 +382,7 @@
                 <li class="portfolio-card">
                   <a href="#" class="portfolio-card__link">
                     <figure class="portfolio-card__img">
-                      <img src="../../images/portfolio/portfolio_img7.jpg" alt="메타버스 공간구축 02기 포트폴리오1">
+                      <img src="@/assets/images/portfolio/portfolio_img7.jpg" alt="메타버스 공간구축 02기 포트폴리오1">
                       <!-- + 아이콘 -->
                       <i class="ri-add-line plus-icon"></i>
                     </figure>
