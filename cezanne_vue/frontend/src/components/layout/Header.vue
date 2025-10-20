@@ -169,6 +169,8 @@
       handlerSiteMap(){
         this.isActive = !this.isActive;
         
+        document.body.classList.toggle('open');
+        /***
         const body = document.querySelector('body');
         // document.addEventListener('click', () => {
         //   body.classList.toggle('open');
@@ -178,7 +180,12 @@
         } else {
           body.classList.remove('open')
         }
+        **/
+        
       }
+    },
+    beforeUnmount() {
+      document.body.classList.remove('open');
     }
   }
 </script>

@@ -21,16 +21,13 @@
 </template>
 
 <script>
-import { educationData } from '../../data/main/education_data';
-
-  export default {
-    props : {
-      educationData : {
-        type : Array,
-        required : true, 
-        default : () => []
-      }
-    },
-    
-  }
+export default {
+  props : {
+    educationData : {
+      type : Array,
+      required : true, 
+      default : () => []
+    }
+  },  
+}
 </script>
