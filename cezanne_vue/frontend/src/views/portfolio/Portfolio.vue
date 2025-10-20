@@ -60,7 +60,6 @@
               <!-- portfolio List -->
               <PortfolioList :portfolioData="portfolioFilter"/>
             </div>
-            
           </div>
         </div>
       </div> <!-- end : inner -->
