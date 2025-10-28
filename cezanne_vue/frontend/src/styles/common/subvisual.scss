@@ -2,9 +2,9 @@
 
 // Sub Visual Layout
 .sub_visual {
-  &.edu {
     padding: 5rem 0 2rem 0;
     color: $white-color;
+  &.edu {
     background: {
       image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
       url('@/assets/images/about/visual_bg.jpg');
@@ -13,12 +13,27 @@
     }
   }
   &.port {
-    padding: 5rem 0 2rem 0;
-    color: $white-color;
     background: {
     image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
     url('@/assets/images/portfolio/portfolio_visual_bg.jpg');
     repeat: no-repeat;
+    size: cover;
+    }
+  }
+  &.counsel {
+    background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('@/assets/images/about/visual_bg.jpg');
+    repeat: no-repeat;
+    size: cover;
+    }
+  }
+  &.job {
+    background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('@/assets/images/job/job_visual_bg.jpg');
+    repeat: no-repeat;
+    position: top;
     size: cover;
     }
   }
@@ -35,6 +50,7 @@
       margin-top: 1rem;
       line-height: 1.5;
       opacity: 0.8;
+      white-space: pre-line;
     }
   }
   

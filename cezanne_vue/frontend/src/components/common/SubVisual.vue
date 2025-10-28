@@ -9,7 +9,7 @@
         <ul>
           <li><router-link to="/"><span class="pi pi-home"></span></router-link></li>
           <li><span class="pi pi-chevron-right"></span></li>
-          <li><router-link to="/portfolio/">{{ subTopCont.title }}</router-link></li>
+          <li><router-link :to="subTopCont.url">{{ subTopCont.title }}</router-link></li>
         </ul>
       </div>
     </div> 

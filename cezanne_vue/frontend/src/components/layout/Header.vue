@@ -29,7 +29,7 @@
                   <span>학교소개</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/about">학교소개</router-link></li>
+                      <li><router-link to="/">학교소개</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -112,32 +112,32 @@
                 </div>
               </li>
               <li>
-                <a href="./src/html/counsel/index.html">상담센터</a>
+                <router-link to="/counsel">상담센터</router-link>
                 <div class="subMenu">
                   <ul class="inner">
-                    <li><a href="./src/html/counsel/index.html">온라인 상담</a></li>
+                    <li><router-link to="/counsel">온라인 상담</router-link></li>
                     <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
-                    <li><a href="./src/html/counsel/receipt.html">고객칭찬/불편접수</a></li>
+                    <li><router-link to="/counsel/receipt">고객칭찬/불편접수</router-link></li>
                   </ul>
                 </div>
               </li>
               <li>
-                <a href="./src/html/job/job.html">취업센터</a>
+                <router-link to="/job">취업센터</router-link>
                 <div class="subMenu">
                   <ul class="inner">
-                    <li><a href="./src/html/job/job.html">취업현황</a></li>
+                    <li><router-link to="/job">취업현황</router-link></li>
                   </ul>
                 </div>
               </li>
               <li>
-                <a href="./src/html/community/notice.html">커뮤니티</a>
+                <router-link to="/community">커뮤니티</router-link>
                 <div class="subMenu">
                   <ul class="inner">
-                    <li><a href="./src/html/community/notice.html">공지사항</a></li>
-                    <li><a href="./src/html/community/post.html">수강후기</a></li>
-                    <li><a href="./src/html/community/gallery.html">세잔갤러리</a></li>
-                    <li><a href="./src/html/community/competition.html">공모전</a></li>
-                    <li><a href="./src/html/community/qualification.html">자격정보</a></li>
+                    <!-- <li><router-link to="/community/notice">공지사항</router-link></li>
+                    <li><router-link to="/community/post">수강후기</router-link></li>
+                    <li><router-link to="/community/gallery">세잔갤러리</router-link></li>
+                    <li><router-link to="/community/competition">공모전</router-link></li>
+                    <li><router-link to="/community/qualification">자격정보</router-link></li> -->
                   </ul>
                 </div>
                 </li>
@@ -158,6 +158,8 @@
 </template>
 
 <script>
+  import router from '@/router/index.js';
+
   export default {
     data() {
       return {
@@ -168,20 +170,7 @@
     methods : {
       handlerSiteMap(){
         this.isActive = !this.isActive;
-        
         document.body.classList.toggle('open');
-        /***
-        const body = document.querySelector('body');
-        // document.addEventListener('click', () => {
-        //   body.classList.toggle('open');
-        // });
-        if(this.isActive){
-          body.classList.add('open');
-        } else {
-          body.classList.remove('open')
-        }
-        **/
-        
       }
     },
     beforeUnmount() {

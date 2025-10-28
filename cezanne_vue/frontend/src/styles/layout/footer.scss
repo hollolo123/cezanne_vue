@@ -95,18 +95,22 @@ footer {
         margin-top: 2rem;
         button {
           margin-right: 1rem;
+          i {
+            color: $gray-color;
+            font-size: 3rem;
+          }
           svg {
             width: 3.5rem;
             height: 3.5rem;
             color: $gray-color;
           }
-          .ico__youtube:hover {
+          .ri-youtube-line:hover {
             color: $main-color;
           }
-          .ico__facebook:hover {
+          .ri-facebook-fill:hover {
             color: $sub-color;
           }
-          .ico__insta:hover {
+          .ri-instagram-line:hover {
             color: #c81aeb;
           }
         }

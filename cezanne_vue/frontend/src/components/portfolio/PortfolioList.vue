@@ -1,15 +1,13 @@
 <template>
   <section class="portfolio">
     <ul class="portfolio__list">
-      
-      
       <li class="portfolio-card" v-for="item in portfolioData" :key="item.id">
-        <a :href="item.url" class="portfolio-card__link">
+        <router-link :to="`/portfolio/${item.id}`" class="portfolio-card__link">
 
           <figure class="portfolio-card__img">
             <img :src="item.img" :alt="item.num">
             <!-- + 아이콘 -->
-            <i class="ri-add-line plus-icon"></i>
+            <i class="ri-add-line"></i>
           </figure>
 
           <!-- list content -->
@@ -20,9 +18,9 @@
             </p>
             <p class="portfolio-card__date">{{ item.date }}</p>
             <p class="portfolio-card__name">{{ item.name }}</p>
-            <span class="portfolio-card__view">view <i class="ri-arrow-right-long-line"></i></span>
+            <span class="portfolio-card__view">더보러가기 <i class="ri-arrow-right-long-line"></i></span>
           </div>
-        </a>
+        </router-link>
       </li>
       
     </ul>

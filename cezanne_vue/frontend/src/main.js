@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import './styles/reset.css';
 import './styles/common/common.scss';
+import './assets/font/remixicon/remixicon.css';
 import App from './App.vue'
 import router from './router';
 

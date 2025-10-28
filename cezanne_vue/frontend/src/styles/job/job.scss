@@ -1,0 +1,439 @@
+@use '@/styles/common/import/variables' as *;
+@use '@/styles/common/import/mixin' as *;
+
+#contents_body { padding: 5rem 0; }
+
+// overriding
+
+
+.interview {
+  .sub_visual {
+    background: {
+      image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/job/interview_visual_bg.jpg);
+      position: center;
+    };
+  }
+}
+
+
+/*
+* Job
+*/
+.job {
+  position: relative;
+  
+  .job__wrap {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2rem;
+    
+    .job__item {
+      display: block;
+      padding: 4rem 2rem;
+      border: 1px solid $border-color;
+      border-radius: 6px;
+      box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, .1);
+      text-align: center;
+      transition: .5s;
+      cursor: pointer;
+
+      &:hover {
+        border: {
+          color: $main-color;
+        }
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        text-decoration: none;
+      }
+
+      .item__content {
+        margin-top: 1.5rem;
+
+        p {
+          font-size: 1.8rem;
+          color: #555;
+
+          + p {
+            margin-top: .5rem;
+          }
+
+          &.name {
+            font-size: 1.4rem;
+            color: $job-name-color;
+
+            + p {
+              margin-top: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*
+* Job - Detail
+*/
+.job__detail {
+  .detail__wrap {
+    padding: {
+      top: 5rem;
+      bottom: 5rem;
+    }
+  }
+
+  .detail__header {
+    padding: {
+      bottom: 4rem;
+    }
+    border: {
+      bottom: 1px solid $dark-color;
+    }
+
+    > div {
+      span {
+        display: inline-block;
+        font-size: 1.5rem;
+      }
+
+      .category {
+        color: $main-color;
+      }
+
+      .date {
+        position: relative;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          vertical-align: middle;
+          width: 1px;
+          height: 1.6rem;
+          margin: 0 1.5rem 0 1rem;
+          background-color: #555;
+        }
+      }
+    }
+
+    h3 {
+      margin: {
+        top: 2rem;
+        bottom: 2rem;
+      }
+
+      font: {
+        size: 2.8rem;
+        weight: 500;
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    padding: 2rem;
+
+    &::after {
+      position: absolute;
+      content: 'daejeon cezanne vocational school';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font: {
+        size: 5rem;
+        weight: 900;
+      }
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+      color: rgba(221, 221, 221, .3);
+      z-index: -1;
+    }
+
+    > p {
+      font: {
+        family: 'Inklipquid', sans-serif;
+        size: 4rem;
+        weight: 600;
+      }
+      color: #82d3cd;
+    }
+
+    .con {
+      margin-top: 2rem;
+      padding: 2rem 0;
+
+      ul {
+        > li {
+          + li {
+            margin-top: 1rem;
+          }
+
+          span {
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  .detail__btn__container {
+    padding-top: 3rem;
+    border-top: 1px solid $dark-color;
+    text-align: center;
+
+    .btn__list {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 18rem;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #fff;
+      border: 1px solid $dark-color;
+      font: {
+        size: 1.6rem;
+        weight: 600;
+      }
+      color: $dark-color;
+      transition: .5s;
+      
+      &:hover,
+      &:focus {
+        background-color: $dark-color;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+/*
+* Job - Top
+*/
+.job__top {
+  margin: {
+    bottom: 4rem;
+  }
+  padding: {
+    bottom: 2rem;
+  }
+  border-bottom: 2px solid $dark-color;
+  
+  span,
+  strong {
+    font-size: 1.8rem;
+  }
+
+  strong {
+    margin-left: 1rem;
+    color: $main-color;
+  }
+
+  .top__search {
+    margin: {
+      top: 2rem;
+    }
+
+    .input__wrap {
+      position: relative;
+
+      input {
+        @include input() {
+          padding: 0 5rem 0 1.5rem;
+          transition: .5s;
+          
+          &:focus,
+          &:focus-visible {
+            border: {
+              color: $main-color;
+            }
+            outline: none;
+
+            + button {
+              color: $main-color;
+            }
+          }
+        }
+      }
+
+      button {
+        @include button(transparent, #000, 'md') {
+          position: absolute;
+          top: 0;
+          right: 0;
+          min-width: 5rem;
+          height: 100%;
+          transition: .5s;
+        }
+
+        i {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+/*
+* Job - Interview
+*/
+.interview__container {
+  .job__top {
+    margin: 0;
+  }
+}
+
+.interview__content {
+  padding: 3rem 1rem;
+  border-bottom: 1px solid $border-color;
+
+  .interview__item {
+    .item__img {
+      border: 1px solid $border-color;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .item__con {
+      margin-top: 1.5rem;
+
+      .cont__tit {
+        > * {
+          display: block;
+        }
+
+        span {
+          font: {
+            size: 1.8rem;
+          }
+        }
+
+        strong {
+          margin: {
+            top: 1rem;
+          }
+          font: {
+            size: 2rem;
+            weight: 500;
+          }
+        }
+      }
+
+      .detail {
+        position: relative;
+        display: inline-block;
+        margin-top: 2.5rem;
+        padding: 0 3rem 0 2.5rem;
+        font: {
+          family: 'Chosunilbo_myungjo', sans-serif;
+          size: 3rem;
+          weight: 400;
+          style: oblique;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          display: inline-block;
+          width: 2px;
+          height: 3rem;
+          margin-right: 1rem;
+          background-color: $main-color;
+          transform: translateY(-50%) rotate(40deg);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          display: inline-block;
+          width: 2px;
+          height: 3rem;
+          margin-right: 1rem;
+          background-color: $main-color;
+          transform: translateY(-50%) rotate(40deg);
+        }
+      }
+
+      > p {
+        margin-top: 2.5rem;
+        word-break: keep-all;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+
+
+// Responsive
+@media all and (min-width: 768px) {
+  .job {
+    .job__wrap {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .job__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .top__search {
+      margin: 0;
+
+      .input__wrap {
+        input {
+          min-width: 35rem;
+        }
+      }
+    }
+  }
+
+  .interview__content {
+    padding: 3rem;
+
+    .interview__item {
+      display: grid;
+      grid-template-columns: 28rem auto;
+      gap: 3rem;
+
+      .item__img {
+        img {
+          width: auto;
+        }
+      }
+
+      .item__con {
+        margin: 0;
+
+        > p {
+          @include line-ellipsis(2);
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .job {
+    .job__wrap {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .job {
+    .job__wrap {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

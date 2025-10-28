@@ -39,9 +39,9 @@
             <small>&copy; 대전세잔직업전문학교. All rights Reserved.</small>
           </address>
           <div class="sns">
-            <button type="button" onclick="location.href='#'"><RiYoutubeLine class="ico__youtube" /></button>
-            <button type="button" onclick="location.href='#'"><RiFacebookFill class="ico__facebook" /></button>
-            <button type="button" onclick="location.href='#'"><RiInstagramLine class="ico__insta"/></button>
+            <button type="button" onclick="location.href='#'"><i class="ri-youtube-line"></i></button>
+            <button type="button" onclick="location.href='#'"><i class="ri-facebook-fill"></i></button>
+            <button type="button" onclick="location.href='#'"><i class="ri-instagram-line"></i></button>
           </div>
         </div>
       </div>
@@ -50,18 +50,8 @@
 </template>
 
 <script>
-import { RiAddLine } from "@remixicon/vue";
-import { RiYoutubeLine } from "@remixicon/vue";
-import { RiFacebookFill } from "@remixicon/vue";
-import { RiInstagramLine } from "@remixicon/vue";
-
 export default {
-  components : {
-    RiAddLine,
-    RiYoutubeLine,
-    RiFacebookFill,
-    RiInstagramLine
-  },
+
   data() {
     return {
       isActive : false

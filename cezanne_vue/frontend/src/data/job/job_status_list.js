@@ -1,0 +1,68 @@
+/* 취업현황 리스트 data */
+import logo from '@/assets/images/common/logo.png';
+
+export const jobStatusList = [
+  {
+    id : 1,
+    name : '박*정',
+    company : '**기획',
+    message : '입사를 축하드립니다.', 
+    img : logo,
+  },
+  {
+    id : 2,
+    name : '박*지',
+    company : '**상사',
+    message : '입사를 축하드립니다.',
+    img : logo,
+  },
+  {
+    id : 3,
+    name : '이*민',
+    company : '친**팔도',
+    message : '입사를 축하드립니다.', 
+    img : logo,
+  },
+  {
+    id : 4,
+    name : '염*은',
+    company : '**대표',
+    message : '입사를 축하드립니다.',
+    img : logo,
+  },  
+  {
+    id : 5,
+    name : '김*루',
+    company : '와**아이',
+    message : '입사를 축하드립니다.',
+    img : logo,
+  },
+  {
+    id : 6,
+    name : '한*우',
+    company : '***윈도우',
+    message : '입사를 축하드립니다.',
+    img : logo,
+  },
+  {
+    id : 7,
+    name : '최*현',
+    company : '**소프트',
+    message : '입사를 축하드립니다.',
+    img : logo,
+  },      
+  {
+    id : 8,
+    name : '이*빈',
+    company : '메**스',
+    message : '입사를 축하드립니다.',
+    img : logo,
+  },
+  {
+    id : 9,
+    name : '우*진',
+    company : '**테크네이션',
+    message : '입사를 축하드립니다.',
+    img : logo,
+  },  
+]
