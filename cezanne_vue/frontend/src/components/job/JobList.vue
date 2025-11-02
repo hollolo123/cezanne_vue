@@ -1,16 +1,16 @@
 <template>
   <div class="job__wrap">
-    <div class="job__item" v-for="list in jobStatusList" :key="list.id">
-      <router-link to="/">
+    <div class="job__item" v-for="item in jobList" :key="item.id">
+      <router-link :to="`/job/detail/${item.id}`">
         <div class="item__img">
-          <img :src="list.img" alt="test">
+          <img :src="item.img" alt="test">
         </div>
         <div class="item__content">
-          <p class="name">{{ list.name }}</p>
-          <p>{{ list.company }}</p>
-          <p>{{ list.message }}</p>
+          <p class="name">{{ item.name }}</p>
+          <p>{{ item.company }}</p>
+          <p>{{ item.message }}</p>
         </div>
-    </router-link>
+      </router-link>
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@
 <script>
   export default {
     props : {
-      jobStatusList : {
+      jobList : {
         type : Array,
         required : true,
         default : () => []

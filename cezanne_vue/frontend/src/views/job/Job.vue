@@ -26,7 +26,7 @@
               </div>
             </div>
           </div>
-          <JobStatusList :jobStatusList="jobStatusList" />
+          <JobList :jobList="jobListData" />
         </div>
       </div>
     </div>
@@ -36,18 +36,18 @@
 <script>
   import TopBtn from '@/components/common/TopBtn.vue';
   import SubVisual from '@/components/common/SubVisual.vue';
-  import JobStatusList from '@/components/job/JobStatusList.vue';  
-  import { jobStatusList } from '@/data/job/job_status_list'; 
+  import JobList from '@/components/job/JobList.vue';  
+  import { jobListData } from '@/data/job/job_list_data'; 
 
   export default {
     components : {
       TopBtn,
       SubVisual,
-      JobStatusList,
+      JobList,
     },
     data() {
       return {
-        jobStatusList,
+        jobListData,
         subTopCont : {
           className : 'job',
           title : '취업 현황',

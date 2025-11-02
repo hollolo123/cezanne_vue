@@ -37,7 +37,23 @@
     size: cover;
     }
   }
-
+  &.commu {
+    background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('@/assets/images/community/notice_bg.jpg');
+    repeat: no-repeat;
+    position: center;
+    }
+  }
+  &.about {
+    background: {
+      image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+      url('@/assets/images/about/visual_bg.jpg');
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+  }
 
   .sub_visual_text {
     text-align: center;

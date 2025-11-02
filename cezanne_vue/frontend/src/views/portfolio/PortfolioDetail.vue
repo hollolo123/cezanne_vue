@@ -11,7 +11,7 @@
           <h3>대전세잔직업전문학교</h3>
         </div>
         <div class="portfolio-detail">
-          <div class="portfolio-img"><img :src="portfolioData.detailImg"></div>
+          <div class="portfolio-img"><img :src="portfolioDetailData.detailImg"></div>
           <div class="portfolio-bg">
             <div class="portfolio-cont">
               <h3>PORTFOLIO</h3>
@@ -19,23 +19,23 @@
               <ul class="portfolio-into">
                 <li>
                   <h4>수강생</h4>
-                  <p>{{ portfolioData.name }}</p>
+                  <p>{{ portfolioDetailData.name }}</p>
                 </li>
                 <li>
                   <h4>과정</h4>
-                  <p>{{ portfolioData.num }}</p>
+                  <p>{{ portfolioDetailData.num }}</p>
                 </li>
                 <li>
                   <h4>과정명</h4>
-                  <p>{{ portfolioData.eduTitle }}</p>
+                  <p>{{ portfolioDetailData.eduTitle }}</p>
                 </li>
                 <li>
                   <h4>과정 기간</h4>
-                  <p>{{ portfolioData.date }}</p>
+                  <p>{{ portfolioDetailData.date }}</p>
                 </li>
                 <li>
                   <h4>URL</h4>
-                  <a :href="portfolioData.portfolioUrl" target="_blank" class="portfolio-url">포트폴리오 바로가기</a>
+                  <a :href="portfolioDetailData.portfolioUrl" target="_blank" class="portfolio-url">포트폴리오 바로가기</a>
                 </li>
               </ul>
             </div>
@@ -62,7 +62,7 @@ export default {
   },
   data() {
     return {
-      portfolioData: {},
+      portfolioData,
       subTopCont : {
         className : 'port',
         title : "포트폴리오",
@@ -71,9 +71,15 @@ export default {
       }
     }
   },
-  mounted() {
-    const id = parseInt(this.$route.params.id);
-    this.portfolioData = portfolioData.find(item => item.id === id) || {};
+  // mounted() {
+  //   const id = parseInt(this.$route.params.id);
+  //   this.portfolioData = portfolioData.find(item => item.id === id) || {};
+  // },
+  computed : {
+    portfolioDetailData() {
+      const id = parseInt(this.$route.params.id);
+      return this.portfolioData.find(item => item.id === id) || {};
+    }
   }
 }
 </script>

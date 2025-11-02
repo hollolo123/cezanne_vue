@@ -36,7 +36,7 @@
     </div>
     <div class="swiper-pagination"></div>
   </div> -->
-  <div  >
+  <div>
     <swiper class="mainSlide"
     :modules="modules" 
     :pagination="true" 

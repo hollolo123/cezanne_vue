@@ -15,7 +15,7 @@
           <div class="site__wrap">
             <button class="selected" @click="selectList">
               <span>Family Site</span>
-              <RiAddLine />
+              <i class="ri-add-line"></i>
             </button>  
             <div class="site__list" :class="{active:isActive}">
               <a href="https://www.moel.go.kr/local/daejeon/index.do" target="_blank" title="고용노동부 대전지방고용노동청">고용노동부 대전지방고용노동청</a>

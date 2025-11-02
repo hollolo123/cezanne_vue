@@ -1,13 +1,14 @@
 /* 취업현황 리스트 data */
-import logo from '@/assets/images/common/logo.png';
+import logo from '@/assets/images/common/logo.png';       
 
-export const jobStatusList = [
+export const jobListData = [
   {
     id : 1,
     name : '박*정',
     company : '**기획',
     message : '입사를 축하드립니다.', 
     img : logo,
+    date : '2025-07-14',
   },
   {
     id : 2,
@@ -15,6 +16,7 @@ export const jobStatusList = [
     company : '**상사',
     message : '입사를 축하드립니다.',
     img : logo,
+    date : '2025-07-14',
   },
   {
     id : 3,
@@ -22,6 +24,7 @@ export const jobStatusList = [
     company : '친**팔도',
     message : '입사를 축하드립니다.', 
     img : logo,
+    date : '2025-07-14',
   },
   {
     id : 4,
@@ -29,6 +32,7 @@ export const jobStatusList = [
     company : '**대표',
     message : '입사를 축하드립니다.',
     img : logo,
+    date : '2025-07-14',
   },  
   {
     id : 5,
@@ -36,6 +40,7 @@ export const jobStatusList = [
     company : '와**아이',
     message : '입사를 축하드립니다.',
     img : logo,
+    date : '2025-07-14',
   },
   {
     id : 6,
@@ -43,6 +48,7 @@ export const jobStatusList = [
     company : '***윈도우',
     message : '입사를 축하드립니다.',
     img : logo,
+    date : '2025-07-14',
   },
   {
     id : 7,
@@ -57,6 +63,7 @@ export const jobStatusList = [
     company : '메**스',
     message : '입사를 축하드립니다.',
     img : logo,
+    date : '2025-07-14',
   },
   {
     id : 9,
@@ -64,5 +71,6 @@ export const jobStatusList = [
     company : '**테크네이션',
     message : '입사를 축하드립니다.',
     img : logo,
+    date : '2025-07-14',
   },  
 ]

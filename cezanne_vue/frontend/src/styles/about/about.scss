@@ -1,0 +1,281 @@
+@use '@/styles/common/import/variables' as *;
+
+.top {
+  margin: 5rem 0;
+}
+
+// 메뉴에 스크롤 생김
+.about {
+  .inner {
+    overflow-x: hidden;
+  }
+}
+
+
+// about 페이지
+// 소개
+.into {
+  .left {
+    display: block;
+    h3 {
+      font-size: 2.6rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .right {
+    line-height: 1.8;
+    word-break: keep-all;
+    p {
+      font-size: 1.7rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+// 연혁
+.history {
+  .left {
+    h3 {
+      margin-bottom: 2rem;
+    }
+  }
+  .right {
+    dl {
+      &:first-child {
+        padding-top: 0rem;
+      }
+      display: grid;
+      grid-template-columns: 15rem auto;
+      gap: 10px;
+      padding: 2rem 2rem 2rem 0;
+      border-bottom: 1px solid #ddd;
+      dt {
+        font-size: 2.4rem;
+        word-break: keep-all;
+        letter-spacing: 2px;
+      }
+      dd {
+        line-height: 1.5625; 
+        word-break: keep-all;
+      }
+    }
+  }
+}
+
+// 비전 및 이념
+.vision {
+  padding: 5rem 0;
+  background-color: #f7f8f9; // 배경색
+  .title {
+    h3 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .text {
+    dl {
+      margin: 1rem 0 3rem;
+      dt {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+        span {
+          font-size: 2rem;
+          display: inline-block;
+          padding: .5rem 1.3rem;
+          background: $main-color;
+          color: $white-color;
+        }
+      }
+      dd {
+        p {
+          line-height: 1.5625; 
+          word-break: keep-all;
+        }
+        a {
+          position: relative;
+          display: inline-block; 
+          overflow: hidden;
+          font: {
+            size: 1.4rem;
+            weight: 400;
+          };
+          padding: 1.2rem 1rem;
+          border-bottom: 1px solid #E6204B;
+          color: #333;
+          &:hover {
+            text-decoration: none;
+            color: #E6204B;
+          }
+        }
+      }
+    }
+  }
+}
+// 시설장비
+#equipment {
+  h3 {
+    margin: {
+      bottom: 4rem;
+    }
+  }
+}
+
+// 스와이퍼
+.about_visual {
+  height: 65rem;
+  
+  .swiper-wrapper {
+    .swiper-slide {
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: {
+          repeat: no-repeat;
+          position: center;
+          size: cover;
+        };
+
+        &::before {
+          content: attr(data-desc);
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          display: block;
+          width: 100%;
+          height: 5rem;
+          background: {
+            color: rgba(0, 0, 0, .6);
+          }
+          font: {
+            size: 1.7rem;
+          }
+          text-align: center;
+          color: #fff;
+          line-height: 5rem;
+        }
+
+        &.slide1 {
+          background: {
+            image: url('@/assets/images/about/about_swiper_img_1.jpg');
+          }
+        }
+
+        @for $i from 2 through 8 {
+          &.slide#{$i} {
+            background: {
+              image: url('@/assets/images/about/about_swiper_img#{$i}.png');
+            }
+          }
+
+          @if $i == 3 {
+            &.slide3 {
+              background: {
+                image: url('@/assets/images/about/about_swiper_img3.jpg');
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-button-next, 
+  .swiper-button-prev {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    width: 3.8rem;
+    height: 8.5rem;
+    svg {
+      width: 4rem; 
+      height: 4rem;
+      color: $main-color;
+
+    }
+  }
+}
+
+// 데스크탑
+@media screen and (min-width:768px) {
+  // 공통
+  .top {
+    margin: 10rem 0;
+  }
+
+  // 소개
+  .into {
+    .inner {
+      display: grid;
+      grid-template-columns: 40rem auto;
+      gap: 10px;
+    }
+  }
+
+  // 연혁
+  .history {
+    .inner {
+      display: grid;
+      grid-template-columns: 40rem auto;
+      gap: 10px;
+      .right {
+        dl {
+          grid-template-columns: 25rem auto;
+          &:first-child {
+            padding-top: 0rem;
+          }
+          dd {
+            p {
+              line-height: 1.5625; 
+              word-break: keep-all;
+            }
+          }
+        }
+      }
+    } 
+  }
+  
+  // 비전 및 이념
+  .vision {
+    .title {
+      h3 {
+        margin-bottom: 4rem;
+      }
+    }
+    dl {
+      display: grid;
+      grid-template-columns: 40rem auto 15rem;
+      gap: 10px;
+
+      dt {
+        span {
+          margin-right: .5rem;
+        }
+      }
+      dd {
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  // 시설 장비
+
+  // 스와이퍼
+  
+}
+
+/* scroll magic */
+.back-to-position { opacity: 0; transition: 1s; }
+.back-to-position.to-right { transform: translateX(-300px); } // 오른쪽으로 움직이면서 왼쪽에서 등장
+.back-to-position.to-left { transform: translateX(300px); } // 왼쪽으로 움직이면서 오른쪽에서 등장
+// show 클래스가 생기면
+.show .back-to-position { opacity: 1; transform: translateX(0); }
+
+.show .back-to-position.delay-0 { transition-delay: 0; }
+.show .back-to-position.delay-1 { transition-delay: .2s; }
+.show .back-to-position.delay-2 { transition-delay: .4s; }
+.show .back-to-position.delay-3 { transition-delay: .6s; }
+.show .back-to-position.delay-4 { transition-delay: .8s; }
+.show .back-to-position.delay-5 { transition-delay: 1s; }
+.show .back-to-position.delay-6 { transition-delay: 1.2s; }

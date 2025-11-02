@@ -54,4 +54,13 @@
     - 이벤트 리스너 제거: document.addEventListener 제거
     - 직접적인 클래스 제어: isActive 상태에 따라 body에 open 클래스를 직접 추가/제거
     - 명확한 로직: if-else 문으로 클래스 추가/제거를 명확하게 구분
-    
+
+
+2025.11.02
+# About 스크롤 이벤트
+- 기존 ScrollMagic 라이브러리 ---> 스크롤 이벤트로 교체
+  - 스크롤 이벤트 등록 : window.addEventListener('scroll', () => {})
+  - document.querySelectorAll('.scroll-spy')
+  - 화면 높이 계산 : window.innerHeight
+  - 각 요소의 위치 계산 : getBoundingClientRect().top **
+  - 90% 도달 시 show 추가 

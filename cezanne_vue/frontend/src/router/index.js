@@ -6,8 +6,10 @@ import Portfolio from '@/views/portfolio/Portfolio.vue';
 import PortfolioDetail from '@/views/portfolio/PortfolioDetail.vue';
 import Counsel from '@/views/counsel/Counsel.vue';
 import Receipt from '@/views/counsel/Receipt.vue';
-import Job from '@/views/job/Job.vue';
+import Job from '@/views/job/Job.vue';    
+import JobDetail from '@/views/job/JobDetail.vue';          
 import BoardList from '@/views/community/BoardList.vue';
+import About from '@/views/about/About.vue';
 
 // Route 정의 : URL 요청에 대해 어떤 페이지 (컴포넌트) 를 보여줄 지에 대한 매핑 정보 정의
 const routes = [
@@ -16,7 +18,12 @@ const routes = [
     name : 'home',
     component : Main,
   },
-  
+  // about
+  {
+    path : '/about',
+    name : 'about',
+    component : About,
+  },
   // education
   {
     path : '/education',
@@ -68,7 +75,18 @@ const routes = [
   // job
   {
     path : '/job',
-    component : Job,
+    children :  [
+      {
+        path : '',
+        name : 'job',
+        component : Job,
+      },
+      {
+        path : 'detail/:id',   
+        name : 'jobDetail',
+        component : JobDetail,  
+      }
+    ]
   },
   
   // community

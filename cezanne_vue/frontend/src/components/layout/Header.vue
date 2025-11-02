@@ -29,7 +29,7 @@
                   <span>학교소개</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/">학교소개</router-link></li>
+                      <li><router-link to="/about">학교소개</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -88,10 +88,10 @@
           <div class="gnbNav">
             <ul>
               <li>
-                <a href="./src/html/about/about.html">학교소개</a>
+                <router-link to="/about">학교소개</router-link>
                 <div class="subMenu">
                   <ul class="inner">
-                    <li><a href="./src/html/about/about.html">학교소개</a></li>
+                    <li><router-link to="/about">학교소개</router-link></li>
                   </ul>
                 </div>
               </li>
@@ -158,8 +158,6 @@
 </template>
 
 <script>
-  import router from '@/router/index.js';
-
   export default {
     data() {
       return {
