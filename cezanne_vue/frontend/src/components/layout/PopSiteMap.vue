@@ -3,7 +3,7 @@
     <div class="sitemap__container">
       <div class="sitemap__ar">
         <div class="sitemap__util">
-          <p><img src="./src/images/common/logo.png" alt=""></p>
+          <p><img src="@/assets/images/common/logo.png" alt=""></p>
           <h2 class="tit">최고의 강사진과 맞춤형 관리 <br> 실무 중심 커리큘럼</h2>
           <h3 class="subtit">전문가 양성 대전세잔직업전문학교</h3>
         </div>
