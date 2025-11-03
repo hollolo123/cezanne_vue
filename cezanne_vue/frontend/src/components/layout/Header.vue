@@ -145,7 +145,7 @@
           </div>
           <!-- 사이트맵 -->
           <div class="sitemapBtn">
-            <button type="button" @click="popSiteMap"> 
+            <button type="button" @click="popSiteMap()"> 
               <span class="bar1"></span>
               <span class="bar2"></span>
               <span class="bar3"></span>
@@ -164,14 +164,16 @@
         isActive: false,
       }
     },
-    
+    emits : [
+      'pop-sitemap'
+    ],
     methods : {
       handlerSiteMap(){
         this.isActive = !this.isActive;
         document.body.classList.toggle('open');
       },
       popSiteMap() {
-
+        this.$emit('pop-sitemap');
       }
     },
     beforeUnmount() {

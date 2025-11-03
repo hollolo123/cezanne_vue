@@ -1,136 +1,6 @@
 @use './import/variables' as *;
 
-// TODO : common.scss 에 옮길 예정
-// .open {
-//   .mobileWrap {
-//     opacity: 1;
-//     visibility: visible;
-
-//     .m_gnb {
-//       display: block;
-//     }
-//   }
-// }
-
-.mobileWrap {
-  position: absolute;
-  top: 94px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1023;
-  transition: opacity .35s, visibility .35s;
-
-  .m_gnb {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
-
-    .m_gnb__ar {
-      padding: 5rem 2rem;
-      background-color: #EFEFEF;
-
-      .tit {
-        font: {
-          size: 3rem;
-          weight: 600;
-        }
-        color: #2d2d2d;
-        letter-spacing: -.15rem;
-      }
-
-      .subtit {
-        margin-top: .5rem;
-        font: {
-          size: 1.6rem;
-          weight: 400;
-        }
-        color: #818181;
-        letter-spacing: -.15rem;
-      }
-    }
-
-    .m_gnb__content {
-      height: calc(100vh - 157px - 10rem);
-      padding: 5rem 2rem;
-      overflow-y: auto;
-      background: {
-        color: #f6f6f6;
-      }
-
-      > ul {
-        display: flex;
-        flex-direction: column;
-
-        > li {
-          display: flex;
-          align-items: center;
-          padding: 3rem 0;
-
-          &:not(:last-child) {
-            border-bottom: 1px dashed #A7A7A7;
-          }
-
-          > span {
-            min-width: 11rem;
-            font: {
-              size: 2rem;
-              weight: 700;
-            }
-            color: #373737;
-          }
-
-          > a {
-            font: {
-              size: 1.8rem;
-              weight: 400;
-            }
-          }
-
-          .subMenu {
-            .inner {
-              gap: 3rem;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Top Button */
-#topBtn {
-  opacity: 0;
-  visibility: hidden;
-  transition: .35s;
-
-  &.visible {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
 @media all and (min-width: 992px) {
-  /* Mobile Wrap */
-  .mobileWrap {
-    display: none;
-    opacity: 0 !important;
-    visibility: hidden !important;
-
-    .m_gnb {
-      display: none !important;
-    }
-  }
-
-  .m_gnbBtn {
-    display: none;
-  }
-
   /* Sitemap */
   .sitemap {
     position: fixed;
@@ -138,17 +8,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
     transition: opacity .35s, visibility .35s;
-  
-    &.on {
-      opacity: 1;
-      visibility: visible;
-      z-index: 1024;
-    }
-  
+    z-index: 1024;
     .sitemap__container {
       position: absolute;
       top: 0;

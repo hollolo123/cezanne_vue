@@ -8,7 +8,7 @@
           <h3 class="subtit">전문가 양성 대전세잔직업전문학교</h3>
         </div>
         <div class="sitemap__content">
-          <button type="button" class="btn__close">
+          <button type="button" class="btn__close" @click="popSiteMap()">
             <i class="ri-close-large-line"></i>
           </button>
           <div class="sitemap__menu">
@@ -64,7 +64,12 @@
 
 <script>
   export default {
-    
+    emits : ['pop-sitemap'],
+    methods : {
+      popSiteMap() {
+        this.$emit('pop-sitemap');
+      }
+    }
   }
 </script>
 

@@ -1,8 +1,8 @@
 <template>
   <div id="wrap">
     <!-- popup :: sitemap -->
-    <PopSiteMap />
-    <Header />
+    <PopSiteMap v-if="isOpen" @pop-sitemap="popSiteMap" />
+    <Header @pop-sitemap="popSiteMap" />
     <main id="main">
       <!-- router : index.js -->
       <router-view></router-view>
@@ -23,8 +23,15 @@
       Header,
       Footer,
     },
-    setup() {
-
+    data() {
+      return {
+        isOpen : false
+      }
+    },
+    methods : {
+      popSiteMap() {
+        this.isOpen = !this.isOpen;
+      }
     }
   }
 </script>
