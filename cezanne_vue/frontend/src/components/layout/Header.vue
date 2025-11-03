@@ -72,10 +72,10 @@
                   <div class="subMenu">
                     <ul class="inner">
                       <li><router-link to="/community/notice">공지사항</router-link></li>
-                      <li><router-link to="/">수강후기</router-link></li>
-                      <li><router-link to="/">세잔갤러리</router-link></li>
-                      <li><router-link to="/">공모전</router-link></li>
-                      <li><router-link to="/">자격정보</router-link></li>
+                      <li><router-link to="/community/post">수강후기</router-link></li>
+                      <li><router-link to="/community/gallery">세잔갤러리</router-link></li>
+                      <li><router-link to="/community/competition">공모전</router-link></li>
+                      <li><router-link to="/community/qualification">자격정보</router-link></li>
                     </ul>
                   </div>
                   </li>
@@ -133,11 +133,11 @@
                 <router-link to="/community/notice">커뮤니티</router-link>
                 <div class="subMenu">
                   <ul class="inner">
-                    <!-- <li><router-link to="/community/notice">공지사항</router-link></li>
+                    <li><router-link to="/community/notice">공지사항</router-link></li>
                     <li><router-link to="/community/post">수강후기</router-link></li>
                     <li><router-link to="/community/gallery">세잔갤러리</router-link></li>
                     <li><router-link to="/community/competition">공모전</router-link></li>
-                    <li><router-link to="/community/qualification">자격정보</router-link></li> -->
+                    <li><router-link to="/community/qualification">자격정보</router-link></li>
                   </ul>
                 </div>
                 </li>

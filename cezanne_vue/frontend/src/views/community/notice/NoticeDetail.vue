@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="detail__btn__container">
-          <a href="/community/notice" class="btn__list">목록으로</a>
+          <a href="#" class="btn__list" @click="goToList">목록으로</a>
         </div>
       </div>
     </div>
@@ -62,5 +62,14 @@
         return this.boardList.find(item => item.id === id) || {};
       }
     },
+    methods : {
+      goToList() {
+        this.$router.push('/community/notice');
+      }
+    },
+    mounted() {
+      this.viewCount++;
+      console.log(this.viewCount);
+    }
   }
 </script>

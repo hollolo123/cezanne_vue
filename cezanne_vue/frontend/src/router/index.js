@@ -11,6 +11,11 @@ import JobDetail from '@/views/job/JobDetail.vue';
 import Notice from '@/views/community/notice/Notice.vue';
 import About from '@/views/about/About.vue';
 import NoticeDetail from '@/views/community/notice/NoticeDetail.vue';
+import Gallery from '@/views/community/gallery/gallery.vue';
+import GalleryDetail from '@/views/community/gallery/GalleryDetail.vue';
+import Competition from '@/views/community/competition/Competition.vue';
+import Post from '@/views/community/Post.vue';
+import Qualification from '@/views/community/Qualification.vue';
 
 // Route 정의 : URL 요청에 대해 어떤 페이지 (컴포넌트) 를 보여줄 지에 대한 매핑 정보 정의
 const routes = [
@@ -102,6 +107,28 @@ const routes = [
         path : 'notice/:id',
         name : 'noticeDetail',
         component : NoticeDetail  
+      },
+      {
+        path : 'post',
+        name : 'post',
+        component : Post
+      },
+      {
+        path : 'gallery',
+        component : Gallery
+      },
+      {
+        path : 'gallery/:id',
+        name : 'galleryDetail',
+        component : GalleryDetail
+      },
+      {
+        path : 'competition',
+        component : Competition
+      },
+      {
+        path : 'qualification',
+        component : Qualification
       }
     ]
   },

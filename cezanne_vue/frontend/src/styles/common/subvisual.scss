@@ -54,6 +54,15 @@
       size: cover;
     }
   }
+  &.post {
+    background: {
+      image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+      url('@/assets/images/about/visual_bg.jpg');
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+  }
 
   .sub_visual_text {
     text-align: center;
@@ -75,13 +84,19 @@
       display: flex;
       justify-content: center;
       font-size: 1.4rem;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       li {
-        .pi-chevron-right:before {
-          font-size: 1rem;
-          font-weight: 400;
-          opacity: 0.8;
-          margin: 0 0.5rem
+        &::before {
+          vertical-align: middle; 
+          display: inline-block;
+          content: '\EA54';
+          font: {
+            family: 'remixicon';
+            weight: 400;
+          };
+        }
+        &:first-child::before {
+          display: none;
         }
       }
     }
