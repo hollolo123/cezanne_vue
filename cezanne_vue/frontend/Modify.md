@@ -64,3 +64,74 @@
   - 화면 높이 계산 : window.innerHeight
   - 각 요소의 위치 계산 : getBoundingClientRect().top **
   - 90% 도달 시 show 추가 
+
+
+2025.11.03
+# Notice 조회수 증가
+- 게시글 상세 접근 시 조회수 증가시키는 방식
+- 조회수를 localStorage에 저장하여 조회수 증가시키는 방식
+- 조회수를 저장하는 키 : board_view_${id}
+
+detail
+```js
+methods : {
+  incrementViewCount() {
+    const id = parseInt(this.$route.params.id);
+    const storageKey = `board_view_${id}`;
+
+    // localStorage에서 조회수 가져오기, 없으면 기본값 사용
+    const storedView = localStorage.getItem(storageKey);
+    const baseView = this.boardDetailData.view || 0;
+
+     // 저장된 조회수가 있으면 사용, 없으면 기본값에서 시작
+    let currentView = storedView ? parseInt(storedView) : baseView;
+
+    // 조회수 증가
+    currentView += 1;
+
+    // localStorage에 저장
+    localStorage.setItem(storageKey, currentView.toString());
+
+    // 화면에 반영
+    this.viewCount = currentView;
+  }
+}
+```
+List 
+```js
+<td>{{ getViewCount(item.id) }}</td>
+
+methods : {
+  getViewCount(id) {
+    const storageKey = `board_view_${id}`;
+    const storedView = localStorage.getItem(storageKey);
+    
+    // localStorage에 저장된 조회수가 있으면 반환, 없으면 기본값 반환
+    return storedView ? parseInt(storedView) : (this.boardList.find(item => item.id === id)?.view || 0);
+  }
+}
+
+```
+
+
+*** 주요 변경사항 ***
+1. NoticeDetail.vue
+- viewCount 데이터 속성 추가
+- mounted 라이프사이클에서 incrementViewCount() 호출
+- incrementViewCount() 메서드:
+  - localStorage에서 해당 게시글의 조회수 조회
+  - 없으면 기본값(boardDetailData.view) 사용
+  - 조회수 증가 후 localStorage에 저장
+  - 화면에 반영
+
+2. BoardList.vue
+- getViewCount() 메서드 추가
+  - localStorage에서 조회수 조회
+  - 없으면 기본값 사용
+  - 목록에서도 동적 조회수 표시
+
+3. 동작 방식
+  - 상세 페이지 접근 시 조회수가 자동 증가
+  - localStorage에 조회수 저장되어 브라우저를 닫아도 유지
+  - 목록과 상세 페이지 모두 동일한 조회수 표시
+  - 게시글 상세 페이지를 열 때마다 조회수가 증가하며, localStorage에 저장되어 다음 방문 시에도 유지됩니다.

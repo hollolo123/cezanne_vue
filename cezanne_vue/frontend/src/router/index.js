@@ -8,8 +8,9 @@ import Counsel from '@/views/counsel/Counsel.vue';
 import Receipt from '@/views/counsel/Receipt.vue';
 import Job from '@/views/job/Job.vue';    
 import JobDetail from '@/views/job/JobDetail.vue';          
-import BoardList from '@/views/community/BoardList.vue';
+import Notice from '@/views/community/notice/Notice.vue';
 import About from '@/views/about/About.vue';
+import NoticeDetail from '@/views/community/notice/NoticeDetail.vue';
 
 // Route 정의 : URL 요청에 대해 어떤 페이지 (컴포넌트) 를 보여줄 지에 대한 매핑 정보 정의
 const routes = [
@@ -95,8 +96,13 @@ const routes = [
     children : [
       {
         path : 'notice',
-        component : BoardList,
+        component : Notice,
       },
+      {
+        path : 'notice/:id',
+        name : 'noticeDetail',
+        component : NoticeDetail  
+      }
     ]
   },
 ];

@@ -15,39 +15,39 @@
             <div class="sitemap__item">
               <h3 class="title">학교 소개</h3>
               <ul>
-                <li><a href="./src/html/about/about.html">학교 소개</a></li>
+                <li><a href="/about">학교 소개</a></li>
               </ul>
             </div>
             <div class="sitemap__item">
               <h3 class="title">교육 과정</h3>
               <ul>
-                <li><a href="./src/html/education/education.html">교육 과정</a></li>
+                <li><a href="/education">교육 과정</a></li>
               </ul>
             </div>
             <div class="sitemap__item">
               <h3 class="title">포트폴리오</h3>
               <ul>
-                <li><a href="./src/html/portfolio/index.html">포트폴리오</a></li>
+                <li><a href="/portfolio">포트폴리오</a></li>
               </ul>
             </div>
             <div class="sitemap__item">
               <h3 class="title">상담 센터</h3>
               <ul>
-                <li><a href="./src/html/counsel/index.html">온라인 상담</a></li>
+                <li><a href="/counsel">온라인 상담</a></li>
                 <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
-                <li><a href="./src/html/counsel/receipt.html">고객 칭찬 / 불편 접수</a></li>
+                <li><a href="/counsel/receipt">고객 칭찬 / 불편 접수</a></li>
               </ul>
             </div>
             <div class="sitemap__item">
               <h3 class="title">취업 센터</h3>
               <ul>
-                <li><a href="./src/html/job/job.html">취업 현황</a></li>
+                <li><a href="/job">취업 현황</a></li>
               </ul>
             </div>
             <div class="sitemap__item">
               <h3 class="title">커뮤니티</h3>
               <ul>
-                <li><a href="./src/html/community/notice.html">공지사항</a></li>
+                <li><a href="/community/notice">공지사항</a></li>
                 <li><a href="./src/html/community/post.html">수강 후기</a></li>
                 <li><a href="./src/html/community/gallery.html">세잔 갤러리</a></li>
                 <li><a href="./src/html/community/competition.html">공모전</a></li>
