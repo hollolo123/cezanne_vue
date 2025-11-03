@@ -11,7 +11,7 @@ import JobDetail from '@/views/job/JobDetail.vue';
 import Notice from '@/views/community/notice/Notice.vue';
 import About from '@/views/about/About.vue';
 import NoticeDetail from '@/views/community/notice/NoticeDetail.vue';
-import Gallery from '@/views/community/gallery/gallery.vue';
+import Gallery from '@/views/community/gallery/Gallery.vue';
 import GalleryDetail from '@/views/community/gallery/GalleryDetail.vue';
 import Competition from '@/views/community/competition/Competition.vue';
 import Post from '@/views/community/Post.vue';
