@@ -61,7 +61,6 @@ export default {
   setup() {
     return {
       modules : [Pagination, EffectCoverflow],
-      
     }
   }
 }

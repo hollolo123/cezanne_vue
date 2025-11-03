@@ -8,7 +8,7 @@
         </div>
         <div class="gotoApply">
           <span class="tel"><RiPhoneFill class="icobg" /> 042-252-1153</span>
-          <span><button type="button" class="icokakao">카카오톡</button></span>
+          <span><button type="button" class="icokakao" @click="openKakao">카카오톡</button></span>
         </div>
       </div>
       <!-- 상담 신청 -->
@@ -175,10 +175,10 @@
                 </p>
                 <div class="check">
                   <input type="checkbox" name="chk" id="agree">
-                  <label for="agree">개인정보 수집 및 이용에 관한 사항에 동의함</label>
+                  <label for="agree"> 개인정보 수집 및 이용에 관한 사항에 동의함</label>
                 </div>
                 <div class="btn__container">
-                  <button type="submit" class="btn-submit">상담 신청하기</button>
+                  <button type="submit" class="btn-submit" @click="submitForm">상담 신청하기</button>
                 </div>
               </form>
             </div>
@@ -195,6 +195,14 @@ import { RiPhoneFill } from "@remixicon/vue";
 export default {
   components : {
     RiPhoneFill
+  },
+  methods : {
+    submitForm() {
+      alert('해당 서비스는 준비 중입니다.');
+    },
+    openKakao() {
+      window.open('https://pf.kakao.com/_fvaeK','_blank');
+    }
   }
 }
 </script>

@@ -3,8 +3,8 @@
     <div class="footer">
       <div class="ftr__menu">
         <ul class="inner">
-          <li><RouterLink to="/">학교소개</RouterLink></li>
-          <li><RouterLink to="/">이용약관</RouterLink></li>
+          <li><RouterLink to="/about">학교소개</RouterLink></li>
+          <li><RouterLink to="/about">이용약관</RouterLink></li>
           <li><RouterLink to="/" class="privacy">개인정보처리방침</RouterLink></li>
           <li><RouterLink to="/">찾아오시는 길</RouterLink></li>
         </ul>
@@ -39,9 +39,9 @@
             <small>&copy; 대전세잔직업전문학교. All rights Reserved.</small>
           </address>
           <div class="sns">
-            <button type="button" onclick="location.href='#'"><i class="ri-youtube-line"></i></button>
-            <button type="button" onclick="location.href='#'"><i class="ri-facebook-fill"></i></button>
-            <button type="button" onclick="location.href='#'"><i class="ri-instagram-line"></i></button>
+            <button type="button" @click="openYoutube"><i class="ri-youtube-line"></i></button>
+            <button type="button" @click="openFacebook"><i class="ri-facebook-fill"></i></button>
+            <button type="button" @click="openInstagram"><i class="ri-instagram-line"></i></button>
           </div>
         </div>
       </div>
@@ -51,7 +51,6 @@
 
 <script>
 export default {
-
   data() {
     return {
       isActive : false
@@ -60,27 +59,20 @@ export default {
   methods : {
     selectList() {
       this.isActive = !this.isActive;
+    },
+    openYoutube() {
+      window.open('https://www.youtube.com/channel/UCqclDBksujgsUlu3XIYWDQw','_blank');
+    },
+    openFacebook() {
+      window.open('https://www.facebook.com/%EC%84%B8%EC%9E%94it%EC%A7%81%EC%97%85%EC%A0%84%EB%AC%B8%ED%95%99%EA%B5%90-105156694808716','_blank');
+    },
+    openInstagram() {
+      window.open('https://www.instagram.com/djcezanne_it/','_blank');
     }
   }
-  // methods : {
-  //   handlerList() {
-  //     const btn = document.querySelector('.selected');
-  //     const siteList = document.querySelector('.site__list');
-
-  //     btn.addEventListener('click', () => {
-	// 			siteList.classList.toggle('active');
-	// 		})
-  //   }
-  // }, 
-  // mounted() {
-  //   this.handlerList();
-  // }
-  // setup 으로 바꿔보기 ........... setup - ref 
 }
 </script>
 
 <style lang="scss">
   @use '@/styles/layout/footer' as *;
-
-
 </style>

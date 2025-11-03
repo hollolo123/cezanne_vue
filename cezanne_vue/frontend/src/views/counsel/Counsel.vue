@@ -172,7 +172,7 @@
                   <label for="agree"> 개인정보 수집 및 이용에 관한 사항에 동의함</label>
                 </div>
                 <div class="btn__container">
-                  <button type="submit" class="btn-submit">상담 신청하기</button>
+                  <button type="submit" class="btn-submit" @click="submitForm">상담 신청하기</button>
                 </div>
               </form>
             </div>
@@ -200,6 +200,11 @@
           desc : '원활한 상담을 위하여 관심 있는 과정들을 체크해주세요.\n개개인에게 맞춘 교육상담과 1:1 진로 컨설팅까지 실시간으로 상담 가능합니다.',
           url : '/counsel/',
         },
+      }
+    },
+    methods : {
+      submitForm() {
+        alert('해당 서비스는 준비 중입니다.');
       }
     }
   }

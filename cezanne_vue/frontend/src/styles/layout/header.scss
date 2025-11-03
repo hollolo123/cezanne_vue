@@ -18,30 +18,30 @@ header {
   .utill {
     display: none;
   }
-    .header__in {
-      height: 9.4rem;
-      .logo {
-        max-width: 100%;
-      }
-      .m__gnb__btn {
-        button {
-          width: 5rem;
-          height: 5rem;
-          border-radius: 50%;
-          background: $main-color;
-          span {
-            display: block;
-            width: 1.8rem;
-            height: .25rem;
-            background: $white-color;
-            margin: 3px auto;
-            transition: .3s;
-          }
+  .header__in {
+    height: 9.4rem;
+    .logo {
+      max-width: 100%;
+    }
+    .m__gnb__btn {
+      button {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background: $main-color;
+        span {
+          display: block;
+          width: 1.8rem;
+          height: .25rem;
+          background: $white-color;
+          margin: 3px auto;
+          transition: .3s;
         }
       }
-      .webWrap {display: none;}
     }
+    .webWrap {display: none;}
   }
+}
 // 모바일 전용 스타일
 @media (max-width: 991px) {
   .mobileWrap {
@@ -168,6 +168,7 @@ header {
         height: 100%;
         gap: 30px;
       }
+      .m__gnb__btn {display: none;}
       .logo img {max-width: none;}
       .webWrap {
         display: flex;

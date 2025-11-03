@@ -94,7 +94,7 @@ const routes = [
     path : '/community',
     children : [
       {
-        path : '',
+        path : 'notice',
         component : BoardList,
       },
     ]

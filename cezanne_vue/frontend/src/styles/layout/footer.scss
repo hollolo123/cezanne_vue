@@ -3,9 +3,6 @@
 
 footer {
   .inner {
-    // @include flexCenter(){
-    //   align-items: baseline
-    // };
     padding:2rem;
   }
   .familySite {
@@ -62,7 +59,7 @@ footer {
         display: flex;
         li {
           a {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             padding-right: 2rem;
           }
           .privacy {

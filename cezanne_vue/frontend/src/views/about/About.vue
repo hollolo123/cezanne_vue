@@ -1,7 +1,7 @@
 <template>
   <div id="container">
     <TopBtn />
-    <SubVisual :subTopCont = "subTopCont" />
+    <SubVisual :subTopCont="subTopCont" />
     <div id="contents_body">
       <div class="about">
         <!-- 대전세잔직업전문학교 소개 -->

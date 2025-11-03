@@ -3,7 +3,7 @@
   <div id="container">
     <TopBtn />
     <!-- Sub Visual -->
-    <SubVisual :subTopCont = "subTopCont" />
+    <SubVisual :subTopCont="subTopCont" />
     <div id="contents_body">
       <div class="inner">
         <!-- top -->
@@ -105,7 +105,7 @@
           className : 'commu',  
           title : '공지사항',
           desc : '대전세잔직업전문학교에서 진행하는 \n다양한 이벤트와 새로운 소식을 알려드립니다.',
-          url : '/community/'
+          url : '/community/notice'
         }
       }
     }

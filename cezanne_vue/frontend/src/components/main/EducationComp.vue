@@ -38,7 +38,7 @@
           </ul>
         </div>
         <div class="moreBtn">
-          <router-link to="#">
+          <router-link to="/portfolio">
             더보러가기 <i class="arr-icon arr-icon1"></i>
           </router-link>
         </div>

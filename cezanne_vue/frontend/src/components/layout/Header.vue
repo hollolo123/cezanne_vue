@@ -54,8 +54,8 @@
                   <div class="subMenu">
                     <ul class="inner">
                       <li><router-link to="/counsel">온라인 상담</router-link></li>
-                      <li><router-link to="/" target="_blank">카카오톡 상담</router-link></li>
-                      <li><router-link to="/">고객칭찬/불편접수</router-link></li>
+                      <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+                      <li><router-link to="/counsel/receipt">고객칭찬/불편접수</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -71,7 +71,7 @@
                   <span>커뮤니티</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/">공지사항</router-link></li>
+                      <li><router-link to="/community/notice">공지사항</router-link></li>
                       <li><router-link to="/">수강후기</router-link></li>
                       <li><router-link to="/">세잔갤러리</router-link></li>
                       <li><router-link to="/">공모전</router-link></li>
@@ -130,7 +130,7 @@
                 </div>
               </li>
               <li>
-                <router-link to="/community">커뮤니티</router-link>
+                <router-link to="/community/notice">커뮤니티</router-link>
                 <div class="subMenu">
                   <ul class="inner">
                     <!-- <li><router-link to="/community/notice">공지사항</router-link></li>
@@ -145,7 +145,7 @@
           </div>
           <!-- 사이트맵 -->
           <div class="sitemapBtn">
-            <button type="button"> 
+            <button type="button" @click="popSiteMap"> 
               <span class="bar1"></span>
               <span class="bar2"></span>
               <span class="bar3"></span>
@@ -169,6 +169,9 @@
       handlerSiteMap(){
         this.isActive = !this.isActive;
         document.body.classList.toggle('open');
+      },
+      popSiteMap() {
+
       }
     },
     beforeUnmount() {
@@ -178,7 +181,5 @@
 </script>
 
 <style lang="scss">
-  @use '@/styles/layout/header' as *;
-  @use '@/styles/common/sitemap' as *;
-  
+  @use '@/styles/layout/header' as *; 
 </style>

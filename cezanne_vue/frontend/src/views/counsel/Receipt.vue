@@ -85,7 +85,7 @@
             </p>
           </div>
           <div class="write__btn__container">
-            <button type="submit" data-click-event="submit">의견 접수하기</button>
+            <button type="submit" @click="submitSend">의견 접수하기</button>
           </div>
         </form>
       </div>
@@ -123,6 +123,9 @@
         } else {
           infoAgree.classList.remove('active');
         }
+      },
+      submitSend() {
+        alert('해당 서비스는 준비 중입니다.');
       }
     }
   }
