@@ -1,0 +1,122 @@
+@use '../common/variables' as *;
+@use '../common/elements' as *;
+
+#contents_body { padding: 5rem 0; }
+
+.qualification {
+  .sub_visual {
+    background: {
+      image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/community/certificate_bg.jpg);
+      position: center;
+    }
+  }
+
+  .tab__list {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+
+    > li {
+      flex: 1;
+      
+      &:last-child {
+        > a {
+          border-right: 1px solid #DDD;
+        }
+      }
+
+      &.active {
+        > a {
+          border: {
+            top: 2px solid $main-color;
+            left: 2px solid $main-color;
+            right: 2px solid $main-color;
+            bottom: 0;
+          }
+          font: {
+            weight: 700;
+          }
+          color: $main-color;
+        }
+      }
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 2rem;
+        border: {
+          top: 1px solid #DDD;
+          left: 1px solid #DDD;
+          bottom: 2px solid $main-color;
+        }
+        font: {
+          size: 1.7rem;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .tab__contents {
+    padding-top: 10rem;
+
+    .tab__content {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .tit {
+        position: relative;
+        margin-bottom: 3rem;
+
+        &:not(:first-of-type) {
+          margin-top: 10rem;
+        }
+
+        h3 {
+          font: {
+            size: 2.8rem;
+            weight: 200;
+          }
+          color: #282828;
+        }
+      }
+
+      table {
+        th,
+        td {
+          vertical-align: middle;
+          padding: 1rem;
+          border: {
+            width: 1px 0;
+            style: solid;
+            color: $border-color;
+          }
+          font-size: 1.5rem;
+          text-align: center;
+
+          &:not(:last-child) {
+            border-right: 1px solid $border-color;
+          }
+        }
+
+        th {
+          background-color: #f2f3f5;
+          font: {
+            size: 1.5rem;
+            weight: 800;
+          }
+        }
+      }
+    }
+  }
+}
