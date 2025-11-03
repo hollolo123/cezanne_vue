@@ -1,4 +1,6 @@
-@use '../common/import' as *;
+@use '@/styles/common/import/variables' as *;
+@use '@/styles/common/import/mixin' as *;
+@use '@/styles/common/import/elements' as *;
 
 .notice {
   .sub_visual {
