@@ -33,7 +33,7 @@
 
 <script>
   import TopBtn from '@/components/common/TopBtn.vue';
-  import SubVisual from '@/components/common/Subvisual.vue';
+  import SubVisual from '@/components/common/SubVisual.vue';
 
   export default {
     components : {

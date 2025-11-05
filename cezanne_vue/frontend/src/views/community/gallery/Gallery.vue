@@ -25,7 +25,7 @@
 
 <script>
   import TopBtn from '@/components/common/TopBtn.vue';
-  import SubVisual from '@/components/common/Subvisual.vue';
+  import SubVisual from '@/components/common/SubVisual.vue';
   import { galleryData } from '@/data/gallery/gallery_data';
 
   export default {
