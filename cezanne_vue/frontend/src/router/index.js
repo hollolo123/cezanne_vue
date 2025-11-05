@@ -118,7 +118,7 @@ const routes = [
         component : Gallery
       },
       {
-        path : 'gallery/:id',
+        path : 'gallery/galleryDetail/:id',
         name : 'galleryDetail',
         component : GalleryDetail
       },

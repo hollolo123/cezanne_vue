@@ -2,8 +2,8 @@
   <header>
     <div class="utill">
       <ul class="inner">
-        <li><router-link to="/">회원가입</router-link></li>
-        <li><router-link to="/">로그인</router-link></li>
+        <li><router-link to="/" @click="readyMore">회원가입</router-link></li>
+        <li><router-link to="/" @click="readyMore">로그인</router-link></li>
       </ul>  
     </div>
     <div class="header__in">
@@ -174,6 +174,9 @@
       },
       popSiteMap() {
         this.$emit('pop-sitemap');
+      },
+      readyMore() {
+        alert('서비스 준비중입니다.');
       }
     },
     beforeUnmount() {

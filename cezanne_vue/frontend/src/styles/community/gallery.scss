@@ -3,13 +3,6 @@
 #contents_body { padding: 5rem 0; }
 
 .gallery {
-  .sub_visual {
-    background: {
-      image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/community/gallery_bg.jpg);
-      position: center;
-    }
-  }
-
   .gallery__list {
     display: grid;
     grid-template-columns: repeat(2, minmax(10rem, auto));

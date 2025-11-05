@@ -1,7 +1,4 @@
 <template>
-  <TopBtn />
-  <!-- Sub Visual -->
-  <SubVisual :subTopCont = "subTopCont" />
   <div id="contents_body">
     <div class="inner">
       <div class="gallery__detail">
@@ -32,26 +29,8 @@
 </template>
 
 <script>
-  import TopBtn from '@/components/common/TopBtn.vue';
-  import SubVisual from '@/components/common/Subvisual.vue';
-
   export default {
-    components : {
-      TopBtn,
-      SubVisual
-    },
-    data() {
-      return {
-        subTopCont : {
-          className : 'gallery',
-          title : '세잔 갤러리',
-          title2 : '세잔 갤러리',
-          desc : '생생한 사진으로 만나는 대전세잔직업전문학교의 소식입니다.',
-          url : '/community/notice',
-          url2 : '/community/gallery',
-        }
-      }
-    }
+
   }
 </script>
 
