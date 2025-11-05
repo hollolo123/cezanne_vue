@@ -1,26 +1,28 @@
 <template>
   <TopBtn />
   <!-- Sub Visual -->
-  <SubVisual :subTopCont = "subTopCont" />
+  <SubVisual :subTopCont="subTopCont" />
   <div id="contents_body">
     <div class="inner">
       <div class="gallery__detail">
-        <div class="logo__img">
-          <img src="@/assets/images/common/logo.png" alt="logo">
-        </div>
-        <h3 class="title">전기내선 설치, 유지보수 및 효율적 배선 설계 전문가 양성과정 1기 수료식</h3>
-        <div class="img">
-          <img src="@/assets/images/community/gallery/gallery_thumb1.jpg" alt="">
-        </div>
-        <p>
-          전기내선 설치, 유지보수 및 효율적 배선 설계 전문가 양성과정 1기 수료식이 25.07.28에 진행되었습니다. <br>
-          그동안 모두 고생 많으셨습니다!
-        </p>
-        <div class="grid__img">
-          <img src="@/assets/images/community/gallery/1/gallery_cont1.jpg" alt="">
-          <img src="@/assets/images/community/gallery/1/gallery_cont2.jpg" alt="">
-          <img src="@/assets/images/community/gallery/1/gallery_cont3.jpg" alt="">
-          <img src="@/assets/images/community/gallery/1/gallery_cont4.jpg" alt="">
+        <div>
+          <div class="logo__img">
+            <img src="@/assets/images/common/logo.png" alt="logo">
+          </div>
+          <h3 class="title">{{ galleryDetailData.title }}</h3>
+          <div class="img">
+            <img :src="galleryDetailData.thumNail" alt="">
+          </div>
+          <p class="contents">
+            {{ galleryDetailData.contents }}
+          </p>
+          <div class="grid__img">
+            <ul>
+              <li v-for="item in galleryDetailData.img_list" :key="item.id">
+                <img :src="`${item.img}`" alt="" />
+              </li>
+            </ul>
+          </div>
         </div>
         <!-- Button -->
         <div class="detail__btn__container">
@@ -34,6 +36,7 @@
 <script>
   import TopBtn from '@/components/common/TopBtn.vue';
   import SubVisual from '@/components/common/SubVisual.vue';
+  import { galleryData } from '@/data/gallery/gallery_data';
 
   export default {
     components : {
@@ -49,7 +52,14 @@
           desc : '생생한 사진으로 만나는 대전세잔직업전문학교의 소식입니다.',
           url : '/community/notice',
           url2 : '/community/gallery',
-        }
+        },
+        galleryData
+      }
+    },
+    computed : {
+      galleryDetailData() {
+        const id = parseInt(this.$route.params.id);
+        return this.galleryData.find(item => item.id === id) || {};
       }
     }
   }

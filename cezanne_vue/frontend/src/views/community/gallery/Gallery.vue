@@ -3,7 +3,7 @@
   <div id="container">
     <TopBtn />
     <!-- Sub Visual -->
-    <SubVisual :subTopCont = "subTopCont" />
+    <SubVisual :subTopCont="subTopCont" />
     <div id="contents_body" class="gallery">
       <div class="inner"> 
         <div class="gallery__list">
@@ -37,7 +37,7 @@
       return {
         subTopCont : {
           className : 'gallery',
-          title : '세잔 갤러리',
+          title : '커뮤니티',
           title2 : '세잔 갤러리',
           desc : '생생한 사진으로 만나는 대전세잔직업전문학교의 소식입니다.',
           url : '/community/notice',

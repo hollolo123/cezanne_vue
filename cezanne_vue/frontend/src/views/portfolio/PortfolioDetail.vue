@@ -3,7 +3,7 @@
   <div id="container">
     <TopBtn />
     <!-- sub_visual -->
-    <SubVisual :subTopCont = "subTopCont" /> 
+    <SubVisual :subTopCont="subTopCont" /> 
     <!-- portfolio -->
     <div id="contents_body">
       <div class="inner">

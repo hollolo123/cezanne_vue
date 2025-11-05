@@ -3,7 +3,7 @@
   <div id="container">
     <TopBtn />
     <!-- Sub Visual -->
-    <SubVisual :subTopCont = "subTopCont" />
+    <SubVisual :subTopCont="subTopCont" />
     <div id="contents_body" class="qualification">
       <div class="inner">
         <div class="license">
@@ -340,7 +340,7 @@
       return {
         selectedTab : 'tab1',
         subTopCont : {
-          className : 'qualification',
+          className : 'qualific',
           title : '커뮤니티',
           title2 : '자격증 정보',
           desc : '대전세잔직업전문학교에서는 분야별 취업과 직무에 꼭 필요한 핵심 자격증을 소개합니다.',
