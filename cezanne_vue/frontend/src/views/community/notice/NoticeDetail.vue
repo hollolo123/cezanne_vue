@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="detail__btn__container">
-          <router-link to="/notice" class="btn__list">목록으로</router-link>
+          <router-link to="/community/notice" class="btn__list">목록으로</router-link>
         </div>
       </div>
     </div>

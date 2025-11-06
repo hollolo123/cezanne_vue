@@ -51,7 +51,7 @@
             <div class="counsel__form">
               <h3>상담 정보</h3>
               <h4 class="title">신청하시는 분의 이름과 연락처를 입력해주세요.</h4>
-              <form name="application">
+              <form name="application" @submit.prevent="submitForm">
                 <div class="input__wrap">
                   <input 
                     type="text" 
@@ -172,7 +172,7 @@
                   <label for="agree"> 개인정보 수집 및 이용에 관한 사항에 동의함</label>
                 </div>
                 <div class="btn__container">
-                  <button type="submit" class="btn-submit" @click="submitForm">상담 신청하기</button>
+                  <button type="submit" class="btn-submit">상담 신청하기</button>
                 </div>
               </form>
             </div>
