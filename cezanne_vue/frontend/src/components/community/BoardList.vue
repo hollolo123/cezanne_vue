@@ -14,6 +14,7 @@
           <tr v-for="item in boardList" :key="item.id">
             <td>{{ item.id }}</td>
             <td class="text__left"><router-link :to="`/community/notice/${item.id}`">{{ item.title }}</router-link></td>
+            <!-- type : notice, 공모전 ex) ${item.type} // notice, 공모전 데이터 각각 따로  -->
             <td>{{ item.date }}</td>
             <td>{{ item.view }}</td>
           </tr>
