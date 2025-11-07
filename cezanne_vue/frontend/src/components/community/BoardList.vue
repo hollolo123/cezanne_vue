@@ -11,13 +11,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in boardList" :key="item.id">
+          <tr v-for="item in noticeList" :key="item.id">
+            <!-- type : notice, 공모전 ex) ${item.type} // notice, 공모전 데이터 각각 따로  -->
             <td>{{ item.id }}</td>
             <td class="text__left"><router-link :to="`/community/notice/${item.id}`">{{ item.title }}</router-link></td>
-            <!-- type : notice, 공모전 ex) ${item.type} // notice, 공모전 데이터 각각 따로  -->
             <td>{{ item.date }}</td>
             <td>{{ item.view }}</td>
-          </tr>
+          </tr>  
         </tbody>
       </table>
   </div>
@@ -26,7 +26,7 @@
 <script> 
   export default {
     props : {
-      boardList : {
+      noticeList : {
         type : Array,
         required : true,
         default : () => []

@@ -28,7 +28,7 @@
         </div>
         <!-- notice list -->
         <div class="notice__container">
-          <BoardList :boardList ="boardList" />
+          <BoardList :noticeList ="noticeList" />
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
   import TopBtn from '@/components/common/TopBtn.vue';
   import SubVisual from '@/components/common/SubVisual.vue';  
   import BoardList from '@/components/community/BoardList.vue';
-  import boardDataJson from '@/data/board/board_data.json';
+  import noticeDataJson from '@/data/board/notice_data.json'; 
 
   export default {
     components : {
@@ -55,7 +55,7 @@
           desc : '대전세잔직업전문학교에서 진행하는 \n다양한 이벤트와 새로운 소식을 알려드립니다.',
           url : '/community/notice'
         },
-        boardList: boardDataJson.board, 
+        noticeList: noticeDataJson.board, 
       }
     }
   }

@@ -29,7 +29,11 @@
                   <span>학교소개</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/about">학교소개</router-link></li>
+                      <!-- mobile 메뉴 열기 -> 링크 클릭 후 -> 메뉴 닫힘 
+                        클릭시 mobileWrap, body -> active 해제
+                        $route 변화를 감시하여 라우트 전환 직후에도 모바일 메뉴가 자동으로 닫히도록
+                      -->
+                      <li><router-link to="/about" @click="closeMobileMenu">학교소개</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -37,7 +41,7 @@
                   <span>교육과정</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/education">교육과정</router-link></li>
+                      <li><router-link to="/education" @click="closeMobileMenu">교육과정</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -45,7 +49,7 @@
                   <span>포트폴리오</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/portfolio">포트폴리오</router-link></li>
+                      <li><router-link to="/portfolio" @click="closeMobileMenu">포트폴리오</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -53,9 +57,9 @@
                   <span>상담센터</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/counsel">온라인 상담</router-link></li>
-                      <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
-                      <li><router-link to="/counsel/receipt">고객칭찬/불편접수</router-link></li>
+                      <li><router-link to="/counsel" @click="closeMobileMenu">온라인 상담</router-link></li>
+                      <li><a href="https://pf.kakao.com/_fvaeK" target="_blank" @click="closeMobileMenu">카카오톡 상담</a></li>
+                      <li><router-link to="/counsel/receipt" @click="closeMobileMenu">고객칭찬/불편접수</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -63,7 +67,7 @@
                   <span>취업센터</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/job">취업현황</router-link></li>
+                      <li><router-link to="/job" @click="closeMobileMenu">취업현황</router-link></li>
                     </ul>
                   </div>
                 </li>
@@ -71,11 +75,11 @@
                   <span>커뮤니티</span>
                   <div class="subMenu">
                     <ul class="inner">
-                      <li><router-link to="/community/notice">공지사항</router-link></li>
-                      <li><router-link to="/community/post">수강후기</router-link></li>
-                      <li><router-link to="/community/gallery">세잔갤러리</router-link></li>
-                      <li><router-link to="/community/competition">공모전</router-link></li>
-                      <li><router-link to="/community/qualification">자격정보</router-link></li>
+                      <li><router-link to="/community/notice" @click="closeMobileMenu">공지사항</router-link></li>
+                      <li><router-link to="/community/post" @click="closeMobileMenu">수강후기</router-link></li>
+                      <li><router-link to="/community/gallery" @click="closeMobileMenu">세잔갤러리</router-link></li>
+                      <li><router-link to="/community/competition" @click="closeMobileMenu">공모전</router-link></li>
+                      <li><router-link to="/community/qualification" @click="closeMobileMenu">자격정보</router-link></li>
                     </ul>
                   </div>
                   </li>
@@ -116,7 +120,7 @@
                 <div class="subMenu">
                   <ul class="inner">
                     <li><router-link to="/counsel">온라인 상담</router-link></li>
-                    <li><a href="https://pf.kakao.com/_fvaeK" target="_blank">카카오톡 상담</a></li>
+                    <li><a href="https://pf.kakao.com/_fvaeK" target="_blank" @click="closeMobileMenu">카카오톡 상담</a></li>
                     <li><router-link to="/counsel/receipt">고객칭찬/불편접수</router-link></li>
                   </ul>
                 </div>
@@ -167,10 +171,20 @@
     emits : [
       'pop-sitemap'
     ],
+    watch : {
+      $route() {
+        this.closeMobileMenu();
+      }
+    },
     methods : {
       handlerSiteMap(){
         this.isActive = !this.isActive;
         document.body.classList.toggle('open');
+      },
+      closeMobileMenu() {
+        if (!this.isActive) return;
+        this.isActive = false;
+        document.body.classList.remove('open');
       },
       popSiteMap() {
         this.$emit('pop-sitemap');
