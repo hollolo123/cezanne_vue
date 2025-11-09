@@ -76,6 +76,13 @@ table {
         size: 1.8rem;
         weight: 500;
       }
+      white-space: pre-line;
+    }
+    .content__img {
+      text-align: center;
+      img {
+        margin: 1rem auto;
+      }
     }
   }
 

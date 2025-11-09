@@ -10,7 +10,7 @@
         <div class="common__top">
           <div>
             <span>total</span>
-            <strong data-count></strong>
+            <strong data-count>{{ noticeList.length }}</strong>
           </div>
           <!--	-->
           <div class="top__search">
@@ -39,7 +39,7 @@
   import TopBtn from '@/components/common/TopBtn.vue';
   import SubVisual from '@/components/common/SubVisual.vue';  
   import BoardList from '@/components/community/BoardList.vue';
-  import noticeDataJson from '@/data/board/notice_data.json'; 
+  import { noticeData } from '@/data/board/notice_data.js'; 
 
   export default {
     components : {
@@ -55,7 +55,7 @@
           desc : '대전세잔직업전문학교에서 진행하는 \n다양한 이벤트와 새로운 소식을 알려드립니다.',
           url : '/community/notice'
         },
-        noticeList: noticeDataJson.board, 
+        noticeList: noticeData, 
       }
     }
   }

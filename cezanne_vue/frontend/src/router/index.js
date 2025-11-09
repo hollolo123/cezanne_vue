@@ -14,6 +14,7 @@ import NoticeDetail from '@/views/community/notice/NoticeDetail.vue';
 import Gallery from '@/views/community/gallery/Gallery.vue';
 import GalleryDetail from '@/views/community/gallery/GalleryDetail.vue';
 import Competition from '@/views/community/competition/Competition.vue';
+import CompetitionDetail from '@/views/community/competition/CompetitionDetail.vue';
 import Post from '@/views/community/Post.vue';
 import Qualification from '@/views/community/Qualification.vue';
 
@@ -127,9 +128,14 @@ const routes = [
         component : Competition
       },
       {
+        path : 'competition/:id',
+        name : 'competitionDetail',
+        component : CompetitionDetail
+      },
+      {
         path : 'qualification',
         component : Qualification
-      }
+      },
     ]
   },
 ];

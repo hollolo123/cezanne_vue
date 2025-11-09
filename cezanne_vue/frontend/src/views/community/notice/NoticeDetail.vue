@@ -14,7 +14,11 @@
           <div class="detail__content">
             <h5 class="title">{{ noticeDetailData.detail_content }}</h5>
             <div class="content__img">
-              <img :src="`${noticeDetailData.img_list[0].img}`" alt="">
+              <img 
+                v-for="img in noticeDetailData.img_list"
+                :key="img.img"
+                :src="img.img"
+              alt="">
             </div>
           </div>
         </div>
@@ -29,7 +33,7 @@
 <script>
   import TopBtn from '@/components/common/TopBtn.vue';
   import SubVisual from '@/components/common/SubVisual.vue'; 
-  import noticeDataJson from '@/data/board/notice_data.json';    
+  import { noticeData } from '@/data/board/notice_data.js';    
 
   export default {
     components : {
@@ -44,7 +48,7 @@
           desc : '대전세잔직업전문학교에서 진행하는 \n다양한 이벤트와 새로운 소식을 알려드립니다.',
           url : '/community/notice'
         },
-        noticeList : noticeDataJson.board,
+        noticeList : noticeData,
         viewCount : 0
       }
     },
