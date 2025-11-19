@@ -4,9 +4,9 @@
       <div class="ftr__menu">
         <ul class="inner">
           <li><RouterLink to="/about">학교소개</RouterLink></li>
-          <li><RouterLink to="/about">이용약관</RouterLink></li>
-          <li><RouterLink to="/" class="privacy">개인정보처리방침</RouterLink></li>
-          <li><RouterLink to="/">찾아오시는 길</RouterLink></li>
+          <li><RouterLink to="/agreemant">이용약관</RouterLink></li>
+          <li><RouterLink to="/agreemant" class="privacy">개인정보처리방침</RouterLink></li>
+          <li><RouterLink to="/location">찾아오시는 길</RouterLink></li>
         </ul>
       </div>
       <!-- family site -->

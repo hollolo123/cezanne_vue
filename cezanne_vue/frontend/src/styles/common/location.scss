@@ -1,0 +1,145 @@
+#contents_body { padding: 5rem 0; }
+
+.location {
+  .location__info {
+    h4 {
+      margin: {
+        bottom: 2.2rem;
+      }
+      font: {
+        size: 2.6rem;
+        weight: 700;
+      }
+      word-break: keep-all;
+    }
+
+    ul {
+      > li {
+        position: relative;
+        margin-bottom: 1rem;
+        padding: {
+          left: 1rem;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: .7rem;
+          left: 0;
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          background: {
+            color: #69717b;
+          };
+        }
+
+        span {
+          font-size: 1.7rem;
+
+          &.bold {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .location__map {
+    margin-top: 1.8rem;
+
+    iframe {
+      width: 100%;
+      height: 54rem;
+    }
+  }
+
+  .sub__title {
+    margin: {
+      top: 5.4rem;
+      bottom: 2.2rem;
+    }
+    font: {
+      size: 2.6rem;
+      weight: 700;
+    }
+    line-height: 1.4;
+
+    + .sub__title--h4 {
+      margin-top: 0;
+    }
+  }
+
+  .sub__title--h4 {
+    position: relative;
+    margin: {
+      top: 4rem;
+      bottom: 2rem;
+    }
+    font: {
+      size: 2.2rem;
+      weight: 600;
+    }
+    color: #074895;
+    word-break: keep-all;
+    line-height: 1.2;
+
+    i {
+      display: inline-block;
+      margin-right: .5rem;
+      font-weight: 400;
+    }
+  }
+
+  .dirt__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2.4rem 0;
+    border: 1px dashed #d0d0d0;
+    border-radius: 6px;
+
+    .dirt__item {
+      width: 90%;
+      margin: 0 auto;
+      padding: 2.4rem 0;
+      border-bottom: 1px dashed #dadada;
+
+      &:last-child {
+        border: none;
+      }
+
+      > span {
+        display: block;
+        text-align: center;
+
+        &:first-child {
+          margin-bottom: 1.2rem;
+          color: #444;
+        }
+
+        &:last-child {
+          font: {
+            size: 2rem;
+            weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .location {
+    .dirt__list {
+      padding: 2.4rem 0;
+
+      .dirt__item {
+        width: calc(100% / 3);
+        padding: 1rem 0;
+        border-right: 1px dashed #cacaca;
+        border-bottom: none;
+      }
+    }
+  }
+}

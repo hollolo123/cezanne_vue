@@ -44,7 +44,7 @@ export const educationData = [
     eduTitle : '디지털퍼블리싱&웹디자인 전문가 양성',
     subTitle : '디지털퍼블리싱&웹디자인 전문가 양성',
     date : '2025-05-20 ~ 2025-06-19',
-    url : ''
+    url : 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20243001041071&tracseTme=3&crseTracseSe=C0061&trainstCstmrId=500020062102'
   },
   {
     id : 3,
@@ -92,7 +92,7 @@ export const educationData = [
     eduTitle : '전기내선 설치, 유지보수 및 효율적 배선 설계 전문가 양성과정',
     subTitle : '전기내선 설치, 유지보수 및 효율적 배선 설계 전문가 양성과정',
     date : '2025-05-20 ~ 2025-06-19',
-    url : ''
+    url : 'https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?tracseId=AIG20240000467012&tracseTme=2&crseTracseSe=C0061&trainstCstmrId=500020062102'
   },  
   {
     id : 7,

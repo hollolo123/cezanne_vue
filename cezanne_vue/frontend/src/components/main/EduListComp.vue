@@ -34,7 +34,7 @@
         <li class="title">{{ item.eduTitle}}</li>
         <li class="date">{{ item.date }}</li>
       </ul>
-      <button type="button" class="go" :href="item.url" target="_blank">수강신청바로가기</button>
+      <a :href="item.url" target="_blank" class="go">수강신청바로가기</a>
     </swiper-slide>
     <div class="swiper-scrollbar"></div>
   </swiper>

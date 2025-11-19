@@ -115,6 +115,7 @@
       }
       .date {font-size: 1.4rem; font-weight: 100; opacity: .6;}
       .go {
+        display: inline-block;
         background-color: $main-color;
         width: 100%;
         padding: 1.5rem 0;
@@ -122,6 +123,7 @@
         border-radius: 2px;
         font-size: 1.6rem;
         font-weight: 600;
+        text-align: center;
       }
     }
   

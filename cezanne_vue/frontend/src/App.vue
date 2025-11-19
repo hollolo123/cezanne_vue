@@ -1,5 +1,6 @@
 <template>
   <div id="wrap">
+    <TopBtn/>
     <!-- popup :: sitemap -->
     <PopSiteMap v-if="isOpen" @pop-sitemap="popSiteMap" />
     <Header @pop-sitemap="popSiteMap" />
@@ -15,10 +16,12 @@
   import Header from './components/layout/Header.vue';
   import Footer from './components/layout/Footer.vue';
   import PopSiteMap from './components/layout/PopSiteMap.vue';
+  import TopBtn from './components/common/TopBtn.vue';
   import 'primeicons/primeicons.css'
 
   export default {
     components : {
+      TopBtn,
       PopSiteMap,
       Header,
       Footer,

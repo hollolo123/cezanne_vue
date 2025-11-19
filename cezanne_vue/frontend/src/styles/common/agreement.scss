@@ -1,0 +1,169 @@
+@use './import/variables' as *;
+@use 'sass:color';
+
+/*
+* variable
+*
+*/
+$title-color: #1c4682;
+
+#contents_body { padding: 0; }
+.content {
+  position: relative;
+  min-height: calc(100vh - 171px);
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+
+  .tab__menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0 0 6rem;
+
+    button {
+      flex: 1;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 5rem;
+      background: {
+        color: #fff;
+      };
+      border: {
+        width: 1px;
+        style: solid;
+        color: $border-color;
+        radius: 0;
+      }
+      font: {
+        size: 1.6rem;
+      }
+      cursor: pointer;
+      transition: .3s;
+
+      &.active {
+        background: {
+          color: $main-color;
+        }
+        font: {
+          weight: 600;
+        }
+        color: #fff;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, 0);
+          display: block;
+          width: 0;
+          height: 0;
+          border-right: 15px solid transparent;
+          border-left: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          border-top: 15px solid $main-color;
+        }
+      }
+    }
+  }
+
+  .tab__content {
+    display: none;
+    padding: 3rem;
+    background: {
+      color: #fff;
+    };
+    border: {
+      width: 1px;
+      style: solid;
+      color: $border-color;
+    }
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .1);
+
+    h4 {
+      margin-bottom: 3rem;
+      font-size: 2.4rem;
+      color: $dark-color;
+    }
+
+    .cont {
+      .sub {
+        padding-left: 1rem;
+      }
+
+      strong {
+        display: block;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $title-color;
+        color: $title-color;
+      }
+
+      h5 {
+        margin-bottom: 1rem;
+        word-break: keep-all;
+        font: {
+          size: 1.8rem;
+        }
+        line-height: $line-height;
+
+        &.sub {
+          font: {
+            size: 1.6rem;
+            weight: 500;
+          }
+        }
+
+        a {
+          color: $title-color;
+        }
+      }
+
+      > p {
+        word-break: keep-all;
+        font: {
+          size: 1.6rem;
+          weight: 300;
+        }
+        line-height: $line-height;
+
+        ~ p {
+          margin-top: .5rem;
+        }
+
+        + h5 {
+          margin-top: 1rem;
+        }
+      }
+
+      + .cont {
+        margin-top: 5rem;
+      }
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+
+/*
+* Responsive
+*
+*/
+@media all and (min-width: 768px) {
+  .content {
+    .tab__menu {
+      max-width: $inner-width;
+      margin: 0 auto 5rem;
+    }
+
+    .tab__content {
+      max-width: $inner-width;
+      margin: 0 auto;
+    }
+  }
+}

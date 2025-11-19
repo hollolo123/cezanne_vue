@@ -17,6 +17,8 @@ import Competition from '@/views/community/competition/Competition.vue';
 import CompetitionDetail from '@/views/community/competition/CompetitionDetail.vue';
 import Post from '@/views/community/Post.vue';
 import Qualification from '@/views/community/Qualification.vue';
+import Agreement from '@/components/common/Agreement.vue';
+import Location from '@/components/common/Location.vue';
 
 // Route 정의 : URL 요청에 대해 어떤 페이지 (컴포넌트) 를 보여줄 지에 대한 매핑 정보 정의
 const routes = [
@@ -138,6 +140,18 @@ const routes = [
       },
     ]
   },
+
+  // footer 
+  {
+    path : '/agreemant',
+    name : 'agreemant',
+    component : Agreement,
+  },
+  {
+    path : '/location',
+    name : 'location',
+    component : Location,
+  }
 ];
 
 const router = createRouter({
