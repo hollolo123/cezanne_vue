@@ -31,6 +31,13 @@
         isOpen : false
       }
     },
+    watch : {
+      $route() {
+        if(this.isOpen){
+          this.isOpen = false;
+        }
+      }
+    },
     methods : {
       popSiteMap() {
         this.isOpen = !this.isOpen;
