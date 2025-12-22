@@ -47,11 +47,11 @@
             <div class="sitemap__item">
               <h3 class="title">커뮤니티</h3>
               <ul>
-                <li><router-link to="/notice">공지사항</router-link></li>
-                <li><router-link to="/post">수강 후기</router-link></li>
-                <li><router-link to="/gallery">세잔 갤러리</router-link></li>
-                <li><router-link to="/competition">공모전</router-link></li>
-                <li><router-link to="/qualification">자격 정보</router-link></li>
+                <li><router-link to="/community/notice">공지사항</router-link></li>
+                <li><router-link to="/community/post">수강 후기</router-link></li>
+                <li><router-link to="/community/gallery">세잔 갤러리</router-link></li>
+                <li><router-link to="/community/competition">공모전</router-link></li>
+                <li><router-link to="/community/qualification">자격 정보</router-link></li>
               </ul>
             </div>
           </div>
