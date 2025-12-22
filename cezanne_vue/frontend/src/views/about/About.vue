@@ -74,7 +74,7 @@
                 <dt>
                   <span>1</span> 현장 중심 직업교육</dt>
                 <dd><p>수요조사를 통한 지역산업체 맞춤형 직업훈련을 개선 및 보안, 실업자 훈련 및 재직자 직종훈련의 다양성 및 특성화 개발, 산학협력 및 산업체와의 교류의 일환으로 재직자 교육과정 향상</p></dd>
-                <dd><a type="button" href="../education/education.html">교육과정 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
+                <dd><a type="button" href="src/views/education/Education.vue">교육과정 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
               </dl>
               <dl class="back-to-position to-right delay-3">
                 <dt><span>2</span> 시설 및 장비의 현장화</dt>
@@ -84,18 +84,18 @@
               <dl class="back-to-position to-right delay-4">
                 <dt><span>3</span> 학생 능력 개발 강화</dt>
                 <dd><p>인력양성을 위한 교육과정 및 교수법 등을 개발, 훈련생 지원 및 체계적인 학사관리로 훈련생의 가치를 존중, 중도탈락 방지를 위한 훈련생 지원</p></dd>
-                <dd><a type="button" href="../community/post.html">수강후기 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
+                <dd><a type="button" href="src/views/community/post.vue">수강후기 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
                 
               </dl>
               <dl class="back-to-position to-right delay-5">
                 <dt><span>4</span> 취업프로세스 강화</dt>
                 <dd><p>취업률 향상을 위한 보다 적극적이고 체계적인 시스템 구축, 취업 지원 및 사후관리 시스템 강화</p></dd>
-                <dd><a type="button" href="../job/job.html">취업현황 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
+                <dd><a type="button" href="src/views/job/job.vue">취업현황 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
               </dl>
               <dl class="back-to-position to-right delay-6">
                 <dt><span>5</span> 교사 기준 및 능력 개발 강화</dt>
                 <dd><p>현장중심형 교사 채용, 교직원 능력개발을 위한 교육훈련 격려, 교사 평가 제도 확립</p></dd>
-                <dd><a type="button" href="../community/post.html">수강후기 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
+                <dd><a type="button" href="src/views/community/post.vue">수강후기 바로가기 <i class="ri-arrow-right-long-line"></i></a></dd>
               </dl>
             </div> <!-- end : right -->
           </div> <!-- end : inner -->
